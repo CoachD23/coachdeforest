@@ -67,6 +67,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://coachdeforest.com/faq/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://coachdeforest.com/blog/multiple-option-offense-bill-self/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
