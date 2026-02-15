@@ -1,0 +1,20 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a1628"/>
+  <defs>
+    <pattern id="diag-stripe-chart" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#d4a843" stroke-width="2" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag-stripe-chart)"/>
+  <g transform="translate(600, 180)">
+    <rect x="-40" y="-35" width="80" height="70" fill="none" stroke="#d4a843" stroke-width="2"/>
+    <polyline points="-30,20 -10,0 10,10 30,-20" fill="none" stroke="#c41e3a" stroke-width="3"/>
+    <line x1="-35" y1="25" x2="35" y2="25" stroke="#d4a843" stroke-width="2"/>
+    <line x1="-35" y1="-30" x2="-35" y2="25" stroke="#d4a843" stroke-width="2"/>
+  </g>
+  <line x1="150" y1="350" x2="1050" y2="350" stroke="#d4a843" stroke-width="2"/>
+  <text x="600" y="420" font-family="Georgia, serif" font-size="38" fill="white" text-anchor="middle" font-weight="bold">Pace and Space: The Small-Ball</text>
+  <text x="600" y="470" font-family="Georgia, serif" font-size="38" fill="white" text-anchor="middle" font-weight="bold">Offense That Wins Games</text>
+  <text x="600" y="540" font-family="Arial, sans-serif" font-size="20" fill="#d4a843" text-anchor="middle">Dribble Drive Motion Offense Series</text>
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="16" fill="#888" text-anchor="middle">CoachDeForest.com</text>
+</svg>
