@@ -6,6 +6,22 @@
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
 
+  <!-- Google Search Console Verification -->
+  <!-- TODO: Replace YOUR_VERIFICATION_CODE with your Google Search Console verification code -->
+  <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
+
+  <!-- Google Analytics (GA4) -->
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ site.url }}{{ page._url }}">
 
