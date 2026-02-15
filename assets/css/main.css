@@ -1646,3 +1646,44 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   BOOK DETAIL LANDING PAGES
+   ============================================ */
+.book-detail-layout {
+  align-items: flex-start;
+}
+.book-detail-layout .split-image {
+  position: sticky;
+  top: 100px;
+}
+.book-meta-detail {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 2;
+}
+.book-meta-detail i {
+  margin-right: 6px;
+}
+.book-card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.book-card-actions .btn-sm {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .book-detail-layout .split-image {
+    position: static;
+  }
+  .book-card-actions {
+    flex-direction: column;
+  }
+  .book-card-actions .btn-sm {
+    width: 100%;
+  }
+}
