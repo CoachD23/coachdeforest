@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Scroll Animations (IntersectionObserver) ---
-  const fadeEls = document.querySelectorAll('.fade-in');
+  const fadeEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
   if (fadeEls.length && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

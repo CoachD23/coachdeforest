@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@coachdeforest">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="hero-overlay"></div>
+      <div class="page-hero-content">
+        <span class="hero-label fade-in">{{ page.category }}</span>
+        <h1 class="fade-in">{{ page.title }}</h1>
+        <p class="fade-in">{{ page.date }} &bull; {{ page.read_time }}</p>
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section class="section section-white">
+      <div class="container">
+        <article class="blog-article fade-in">
+          {{ content }}
+        </article>
+        <div class="article-footer fade-in">
+          <div class="article-cta">
+            <h3>Enjoyed this article?</h3>
+            <p>Follow Coach DeForest for more coaching tips and insights.</p>
+            <div class="cta-actions" style="justify-content: flex-start;">
+              <a href="https://x.com/coachdeforest" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-x-twitter" style="margin-right:8px;"></i> Follow @coachdeforest</a>
+              <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline btn-sm" style="border-color: var(--navy); color: var(--navy);">Back to Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content fade-in">
+          <h2>Ready to Transform Your Coaching?</h2>
+          <p>Browse the full collection on Amazon and start building the program you've always envisioned.</p>
+          <div class="cta-actions">
+            <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" class="btn btn-primary">Shop on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
