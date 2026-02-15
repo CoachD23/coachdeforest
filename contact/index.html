@@ -21,7 +21,9 @@ description: "Get in touch with Coach DeForest — questions about basketball co
       <div class="split-content fade-in fade-in-left">
         <span class="section-label">Reach Out</span>
         <h2 class="section-title">Send a Message</h2>
-        <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required>
