@@ -1777,3 +1777,72 @@ h1, h2, h3, h4, h5, h6 {
     gap: 16px;
   }
 }
+
+/* ============================================
+   LEAD MAGNET / EMAIL CAPTURE
+   ============================================ */
+.section-leadmagnet {
+  background: linear-gradient(135deg, var(--navy) 0%, #0d1e3a 100%);
+  text-align: center;
+  padding: 80px 20px;
+}
+.leadmagnet-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.leadmagnet-icon {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.leadmagnet-text {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+.leadmagnet-form-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.leadmagnet-input {
+  padding: 14px 20px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  min-width: 200px;
+  flex: 1;
+  transition: var(--transition);
+}
+.leadmagnet-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+.leadmagnet-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.12);
+}
+.leadmagnet-btn {
+  white-space: nowrap;
+  padding: 14px 28px;
+}
+.leadmagnet-disclaimer {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .leadmagnet-form-row {
+    flex-direction: column;
+  }
+  .leadmagnet-input,
+  .leadmagnet-btn {
+    width: 100%;
+    min-width: unset;
+  }
+}

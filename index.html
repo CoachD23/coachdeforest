@@ -258,6 +258,29 @@ description: "Basketball coaching books by Coach Lee DeForest — 2011 state cha
   </div>
 </section>
 
+<!-- EMAIL CAPTURE / LEAD MAGNET -->
+<section class="section section-leadmagnet">
+  <div class="container">
+    <div class="leadmagnet-content fade-in">
+      <div class="leadmagnet-icon">
+        <i class="fas fa-file-pdf"></i>
+      </div>
+      <span class="section-label" style="color:var(--gold);">Free Download</span>
+      <h2 class="section-title" style="color:var(--white);">The Coach's Quick-Start Checklist</h2>
+      <p class="leadmagnet-text">Get a free one-page checklist: 10 things every coach should do before the first practice of the season. Built from 20 years of real coaching experience.</p>
+      <form name="lead-magnet" method="POST" data-netlify="true" class="leadmagnet-form" action="/thank-you/">
+        <input type="hidden" name="form-name" value="lead-magnet">
+        <div class="leadmagnet-form-row">
+          <input type="text" name="first-name" placeholder="First Name" required class="leadmagnet-input">
+          <input type="email" name="email" placeholder="Email Address" required class="leadmagnet-input">
+          <button type="submit" class="btn btn-primary leadmagnet-btn">Get the Free Checklist</button>
+        </div>
+        <p class="leadmagnet-disclaimer">No spam. Unsubscribe anytime. We respect your privacy.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- FOLLOW ON X — enhanced -->
 <section class="section section-community">
   <div class="container">
