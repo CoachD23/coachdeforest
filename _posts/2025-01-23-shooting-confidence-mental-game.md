@@ -46,3 +46,16 @@ For coaches, building confident shooters starts with creating an environment whe
 Encourage your players to shoot with confidence. Celebrate the good shot, not just the made shot. And build shooting pressure into every practice so that game situations feel familiar, not foreign.
 
 > For daily shooting tips and player development content, follow [@coachdeforest](https://x.com/coachdeforest) on X.
+
+
+---
+
+## Related Reading
+
+- [19 Days to Better Basketball: A Blueprint for Rapid Improvement](/blog/19-day-basketball-blueprint/)
+- [Ball Toughness: The Skill That Separates Good from Great](/blog/ball-toughness-drills-youth/)
+- [How to Plan a Basketball Practice That Actually Improves Your Team](/blog/practice-planning-high-school-basketball/)
+
+**Go deeper:** Get the full system in [*The 19 Day Basketball Blueprint*](https://www.amazon.com/Day-Basketball-Blueprint-dramatically-fundamentals/dp/B0C8QQ4BRG) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

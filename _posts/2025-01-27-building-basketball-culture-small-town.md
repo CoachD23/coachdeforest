@@ -46,3 +46,16 @@ Every decision you make should serve the program long-term. That means developin
 The programs that sustain success in small towns aren't the ones that chase short-term wins. They're the ones that build something worth believing in.
 
 > Connect with [@coachdeforest](https://x.com/coachdeforest) on X for more on building basketball programs that last.
+
+
+---
+
+## Related Reading
+
+- [How to Plan a Basketball Practice That Actually Improves Your Team](/blog/practice-planning-high-school-basketball/)
+- [Shooting Confidence: Why the Mental Game Matters](/blog/shooting-confidence-mental-game/)
+- [The Art of In-Game Adjustments](/blog/in-game-adjustments-basketball-coaching/)
+
+**Go deeper:** Get the full system in [*Youth Basketball Coaching: Practice Drills for Ball Toughness*](https://www.amazon.com/Youth-Basketball-Coaching-Practice-Toughness/dp/152097325X) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

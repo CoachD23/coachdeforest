@@ -42,3 +42,16 @@ The other lesson from San Antonio that every coach should internalize: the schem
 You can install every play the Spurs have ever run. If your best player won't pass, it won't work. Build the culture first, then the scheme has a chance.
 
 > For the complete breakdown including detailed diagrams, coaching philosophy, sets, plays, counters, and secondary breaks, check out [How to Coach the Offense of the San Antonio Spurs](https://www.amazon.com/Basketball-Playbook-Coach-Offense-Antonio/dp/1521744971) on Amazon.
+
+
+---
+
+## Related Reading
+
+- [Why the Princeton Offense Still Works in Modern Basketball](/blog/princeton-offense-modern-basketball/)
+- [Why the Multiple Option Offense Works at Every Level](/blog/multiple-option-offense-bill-self/)
+- [The Art of In-Game Adjustments](/blog/in-game-adjustments-basketball-coaching/)
+
+**Go deeper:** Get the full system in [*How to Coach the Offense of the San Antonio Spurs*](https://www.amazon.com/Basketball-Playbook-Coach-Offense-Antonio/dp/1521744971) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

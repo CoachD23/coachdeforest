@@ -45,3 +45,16 @@ The teams that win championships — at every level — are the ones that don't 
 If you want your team to handle pressure like a championship team, you have to practice like one. That means dedicating time every single practice to ball toughness drills.
 
 > For a complete collection of ball toughness drills and strategies, check out [Youth Basketball Coaching: Practice Drills for Ball Toughness](https://www.amazon.com/Youth-Basketball-Coaching-Practice-Toughness/dp/152097325X) on Amazon.
+
+
+---
+
+## Related Reading
+
+- [How to Plan a Basketball Practice That Actually Improves Your Team](/blog/practice-planning-high-school-basketball/)
+- [Shooting Confidence: Why the Mental Game Matters](/blog/shooting-confidence-mental-game/)
+- [19 Days to Better Basketball: A Blueprint for Rapid Improvement](/blog/19-day-basketball-blueprint/)
+
+**Go deeper:** Get the full system in [*Youth Basketball Coaching: Practice Drills for Ball Toughness*](https://www.amazon.com/Youth-Basketball-Coaching-Practice-Toughness/dp/152097325X) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

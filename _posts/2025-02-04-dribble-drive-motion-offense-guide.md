@@ -46,3 +46,16 @@ The Dribble Drive works best when you have guards who can penetrate and players 
 The one requirement: your players have to be willing to drive. If they're afraid of contact or hesitant to attack, the system breaks down. Ball toughness — there's that phrase again — is essential.
 
 > For the complete system including basic and advanced concepts, basketball drills, quick hitters, and secondary breaks, check out [How to Coach the Dribble Drive Motion Offense](https://www.amazon.com/Basketball-Coaching-Advanced-Concepts-Secondary/dp/1521474028) on Amazon.
+
+
+---
+
+## Related Reading
+
+- [Why the Multiple Option Offense Works at Every Level](/blog/multiple-option-offense-bill-self/)
+- [What the San Antonio Spurs Can Teach Your Team](/blog/san-antonio-spurs-offense-breakdown/)
+- [How to Plan a Basketball Practice That Actually Improves Your Team](/blog/practice-planning-high-school-basketball/)
+
+**Go deeper:** Get the full system in [*How to Coach the Dribble Drive Motion Offense*](https://www.amazon.com/Basketball-Coaching-Advanced-Concepts-Secondary/dp/1521474028) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

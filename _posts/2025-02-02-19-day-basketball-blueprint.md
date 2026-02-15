@@ -42,3 +42,16 @@ The blueprint flips that approach. On day three, you're not thinking about passi
 By day 19, you won't be a completely different player. But you'll be a noticeably better one. Your shooting will be more consistent. Your passes will be crisper. Your handle will be tighter. And you'll have a framework you can repeat whenever you want to sharpen your game.
 
 > For the complete day-by-day blueprint with step-by-step techniques, check out [The 19 Day Basketball Blueprint](https://www.amazon.com/Day-Basketball-Blueprint-dramatically-fundamentals/dp/B0C8QQ4BRG) on Amazon.
+
+
+---
+
+## Related Reading
+
+- [Shooting Confidence: Why the Mental Game Matters](/blog/shooting-confidence-mental-game/)
+- [Ball Toughness: The Skill That Separates Good from Great](/blog/ball-toughness-drills-youth/)
+- [How to Plan a Basketball Practice That Actually Improves Your Team](/blog/practice-planning-high-school-basketball/)
+
+**Go deeper:** Get the full system in [*The 19 Day Basketball Blueprint*](https://www.amazon.com/Day-Basketball-Blueprint-dramatically-fundamentals/dp/B0C8QQ4BRG) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

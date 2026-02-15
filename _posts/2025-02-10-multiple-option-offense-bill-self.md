@@ -42,3 +42,16 @@ When I studied his system, I realized that the best offenses in basketball aren'
 If you're looking for an offensive system that doesn't require All-Americans to be effective, the Multiple Option Offense is worth your time. It rewards smart players, adapts to your roster, and gives you a framework for making halftime adjustments that actually work.
 
 > For a complete breakdown including diagrams, play sets, counters, and the coaching cheat sheet, check out [A Multiple Option System Based on Bill Self and the Kansas Jayhawks](https://www.amazon.com/Basketball-Coaching-Multiple-Jayhawks-breakdown/dp/1521289719) on Amazon.
+
+
+---
+
+## Related Reading
+
+- [Why the Princeton Offense Still Works in Modern Basketball](/blog/princeton-offense-modern-basketball/)
+- [The Dribble Drive Motion Offense: A Positionless System](/blog/dribble-drive-motion-offense-guide/)
+- [The Art of In-Game Adjustments](/blog/in-game-adjustments-basketball-coaching/)
+
+**Go deeper:** Get the full system in [*A Multiple Option System Based on Bill Self and the Kansas Jayhawks*](https://www.amazon.com/Basketball-Coaching-Multiple-Jayhawks-breakdown/dp/1521289719) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

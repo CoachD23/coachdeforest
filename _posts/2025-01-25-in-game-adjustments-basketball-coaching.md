@@ -48,3 +48,16 @@ The final piece of in-game adjustments is trusting your players to make their ow
 Build that trust in practice. Give your players decision-making responsibility. Let them call their own plays in scrimmages. The more you empower them to think, the less you need to micromanage from the sideline.
 
 > Follow [@coachdeforest](https://x.com/coachdeforest) on X for game-day coaching insights and strategy discussions.
+
+
+---
+
+## Related Reading
+
+- [Why the Princeton Offense Still Works in Modern Basketball](/blog/princeton-offense-modern-basketball/)
+- [Why the Multiple Option Offense Works at Every Level](/blog/multiple-option-offense-bill-self/)
+- [Building a Basketball Culture in a Small-Town Program](/blog/building-basketball-culture-small-town/)
+
+**Go deeper:** Get the full system in [*How to Coach the Offense of the San Antonio Spurs*](https://www.amazon.com/Basketball-Playbook-Coach-Offense-Antonio/dp/1521744971) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

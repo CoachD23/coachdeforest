@@ -38,3 +38,16 @@ These principles show up throughout structured offensive systems. The San Antoni
 The Princeton Offense works because basketball fundamentals don't change. Defenses will always struggle against teams that move the ball and move their bodies with purpose. The system rewards intelligence, unselfishness, and preparation — exactly the qualities every coach wants to develop in their players.
 
 > Follow [@coachdeforest](https://x.com/coachdeforest) on X for more offensive strategy breakdowns and coaching insights.
+
+
+---
+
+## Related Reading
+
+- [What the San Antonio Spurs Can Teach Your Team](/blog/san-antonio-spurs-offense-breakdown/)
+- [Why the Multiple Option Offense Works at Every Level](/blog/multiple-option-offense-bill-self/)
+- [The Art of In-Game Adjustments](/blog/in-game-adjustments-basketball-coaching/)
+
+**Go deeper:** Get the full system in [*A Multiple Option System Based on Bill Self and the Kansas Jayhawks*](https://www.amazon.com/Basketball-Coaching-Multiple-Jayhawks-breakdown/dp/1521289719) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

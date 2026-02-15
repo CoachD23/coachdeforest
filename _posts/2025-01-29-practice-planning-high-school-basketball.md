@@ -38,3 +38,16 @@ Competition in practice creates the pressure your players will face in games. If
 Finally, respect time. A focused 90-minute practice beats a sloppy two-hour practice every day of the week. If your players are standing in lines waiting for their turn, you're wasting time. If you're spending ten minutes explaining a drill that should take thirty seconds to demonstrate, you're wasting time. Move fast, coach on the fly, and keep the energy high.
 
 > For more coaching strategies and practice frameworks, follow [@coachdeforest](https://x.com/coachdeforest) on X.
+
+
+---
+
+## Related Reading
+
+- [Ball Toughness: The Skill That Separates Good from Great](/blog/ball-toughness-drills-youth/)
+- [Building a Basketball Culture in a Small-Town Program](/blog/building-basketball-culture-small-town/)
+- [The Art of In-Game Adjustments](/blog/in-game-adjustments-basketball-coaching/)
+
+**Go deeper:** Get the full system in [*Youth Basketball Coaching: Practice Drills for Ball Toughness*](https://www.amazon.com/Youth-Basketball-Coaching-Practice-Toughness/dp/152097325X) — available on Amazon in paperback and Kindle.
+
+[Browse all books by Coach DeForest &rarr;](/books/)

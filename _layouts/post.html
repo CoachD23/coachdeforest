@@ -5,13 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page._url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ site.url }}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="{{ site.url }}{{ page._url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-share.png">
+  <meta property="og:site_name" content="Coach DeForest">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Lee DeForest">
+  <meta property="article:published_time" content="{{ page.iso_date }}">
+  <meta property="article:section" content="{{ page.category }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@coachdeforest">
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <meta name="twitter:creator" content="@coachdeforest">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-share.png">
+
+  <!-- Theme & Mobile -->
+  <meta name="theme-color" content="#0a1628">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +42,43 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- JSON-LD: Article + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description | default: site.description }}",
+    "datePublished": "{{ page.iso_date }}",
+    "url": "{{ site.url }}{{ page._url }}",
+    "image": "{{ site.url }}/assets/images/og-share.png",
+    "author": {
+      "@type": "Person",
+      "name": "Lee DeForest",
+      "alternateName": "Coach DeForest",
+      "url": "https://coachdeforest.com/about/",
+      "sameAs": [
+        "https://x.com/coachdeforest",
+        "https://www.amazon.com/Lee-DeForest/e/B072HRC9C1"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Coach DeForest",
+      "url": "https://coachdeforest.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://coachdeforest.com/assets/images/og-share.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page._url }}"
+    }
+  }
+  </script>
 </head>
 <body>
   {% include header.html %}
@@ -34,14 +90,23 @@
       <div class="page-hero-content">
         <span class="hero-label fade-in">{{ page.category }}</span>
         <h1 class="fade-in">{{ page.title }}</h1>
-        <p class="fade-in">{{ page.date }} &bull; {{ page.read_time }}</p>
+        <div class="fade-in" style="display:flex; align-items:center; gap:16px; justify-content:center; flex-wrap:wrap; opacity:0.9;">
+          <span>By <strong>Coach DeForest</strong></span>
+          <span>&bull;</span>
+          <time datetime="{{ page.iso_date }}">{{ page.date }}</time>
+          <span>&bull;</span>
+          <span>{{ page.read_time }}</span>
+        </div>
       </div>
     </section>
 
     <!-- ARTICLE -->
     <section class="section section-white">
       <div class="container">
-        <article class="blog-article fade-in">
+        <article class="blog-article fade-in" itemscope itemtype="https://schema.org/Article">
+          <meta itemprop="headline" content="{{ page.title }}">
+          <meta itemprop="author" content="Lee DeForest">
+          <meta itemprop="datePublished" content="{{ page.iso_date }}">
           {{ content }}
         </article>
         <div class="article-footer fade-in">
@@ -49,8 +114,8 @@
             <h3>Enjoyed this article?</h3>
             <p>Follow Coach DeForest for more coaching tips and insights.</p>
             <div class="cta-actions" style="justify-content: flex-start;">
-              <a href="https://x.com/coachdeforest" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-x-twitter" style="margin-right:8px;"></i> Follow @coachdeforest</a>
-              <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline btn-sm" style="border-color: var(--navy); color: var(--navy);">Back to Blog</a>
+              <a href="https://x.com/coachdeforest" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fab fa-x-twitter" style="margin-right:8px;"></i> Follow @coachdeforest</a>
+              <a href="/blog/" class="btn btn-outline btn-sm" style="border-color: var(--navy); color: var(--navy);">Back to Blog</a>
             </div>
           </div>
         </div>
@@ -64,7 +129,7 @@
           <h2>Ready to Transform Your Coaching?</h2>
           <p>Browse the full collection on Amazon and start building the program you've always envisioned.</p>
           <div class="cta-actions">
-            <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" class="btn btn-primary">Shop on Amazon</a>
+            <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" rel="noopener" class="btn btn-primary">Shop on Amazon</a>
           </div>
         </div>
       </div>
@@ -73,6 +138,6 @@
 
   {% include footer.html %}
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
