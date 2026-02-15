@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="header-container">
+    <a href="{{ '/' | relative_url }}" class="logo">
+      <span class="logo-text">COACH</span>
+      <span class="logo-accent">DEFOREST</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a>
+      <a href="{{ '/books/' | relative_url }}" class="nav-link {% if page.url == '/books/' %}active{% endif %}">Books</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a>
+    </nav>
+    <a href="{{ '/books/' | relative_url }}" class="header-cta">Shop Books</a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

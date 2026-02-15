@@ -1,0 +1,36 @@
+title: "Coach DeForest"
+description: "Basketball coaching wisdom, distilled into books that transform the way you think about the game."
+url: "https://coachdeforest.com"
+baseurl: ""
+author: "Coach DeForest"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Collections
+collections:
+  books:
+    output: true
+    permalink: /books/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
