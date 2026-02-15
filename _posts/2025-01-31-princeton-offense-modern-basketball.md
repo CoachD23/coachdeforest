@@ -5,6 +5,7 @@ description: "The Princeton Offense isn't outdated — it's misunderstood. Here'
 category: "Offensive Strategy"
 date: "January 31, 2025"
 read_time: "6 min read"
+featured_image: "/assets/images/blog/blog-princeton-offense.svg"
 ---
 
 Every few years, someone declares the Princeton Offense dead. Too slow. Too predictable. Not enough spacing for the three-point era. And every few years, a team running Princeton principles makes a deep tournament run and everyone remembers why this system has survived for decades.

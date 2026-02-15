@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  
+  <!-- Diagonal stripe pattern (gold) -->
+  <defs>
+    <pattern id="diag-stripe8" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#d4a843" stroke-width="2" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag-stripe8)"/>
+  
+  <!-- Icon: Team/people -->
+  <g transform="translate(600, 180)">
+    <!-- Center person -->
+    <circle cx="0" cy="-15" r="8" fill="#d4a843"/>
+    <path d="M -8 -5 L 8 -5 L 5 10 L 3 10 L 3 15 L -3 15 L -3 10 L -5 10 Z" fill="#d4a843"/>
+    
+    <!-- Left person -->
+    <circle cx="-25" cy="-12" r="7" fill="#d4a843"/>
+    <path d="M -32 -2 L -18 -2 L -15 10 L -17 10 L -17 14 L -23 14 L -23 10 L -25 10 Z" fill="#d4a843"/>
+    
+    <!-- Right person -->
+    <circle cx="25" cy="-12" r="7" fill="#d4a843"/>
+    <path d="M 18 -2 L 32 -2 L 35 10 L 33 10 L 33 14 L 27 14 L 27 10 L 25 10 Z" fill="#d4a843"/>
+    
+    <!-- Connection lines -->
+    <line x1="-20" y1="5" x2="20" y2="5" stroke="#d4a843" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Gold separator line -->
+  <line x1="150" y1="380" x2="1050" y2="380" stroke="#d4a843" stroke-width="2"/>
+  
+  <!-- Title text -->
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Building Basketball
+  </text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Culture
+  </text>
+  
+  <!-- Coach Deforest branding -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d4a843" text-anchor="middle">
+    COACH DEFOREST
+  </text>
+</svg>

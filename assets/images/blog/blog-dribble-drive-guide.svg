@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  
+  <!-- Diagonal stripe pattern (gold) -->
+  <defs>
+    <pattern id="diag-stripe4" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#d4a843" stroke-width="2" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag-stripe4)"/>
+  
+  <!-- Icon: Basketball with arrow movement -->
+  <g transform="translate(600, 180)">
+    <!-- Basketball -->
+    <circle cx="-15" cy="0" r="30" fill="#d4a843"/>
+    <!-- Horizontal line on ball -->
+    <line x1="-45" y1="0" x2="15" y2="0" stroke="#0a1628" stroke-width="2.5"/>
+    <!-- Vertical curve on ball -->
+    <path d="M -15 -30 Q -5 0 -15 30" stroke="#0a1628" stroke-width="2.5" fill="none"/>
+    <!-- Movement arrow -->
+    <path d="M 20 0 L 55 0" stroke="#d4a843" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <!-- Arrow head -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#d4a843"/>
+      </marker>
+    </defs>
+  </g>
+  
+  <!-- Gold separator line -->
+  <line x1="150" y1="380" x2="1050" y2="380" stroke="#d4a843" stroke-width="2"/>
+  
+  <!-- Title text -->
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Dribble Drive Motion
+  </text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Offense Guide
+  </text>
+  
+  <!-- Coach Deforest branding -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d4a843" text-anchor="middle">
+    COACH DEFOREST
+  </text>
+</svg>

@@ -5,6 +5,7 @@ description: "A breakdown of the Multiple Option Offense inspired by Bill Self a
 category: "Offensive Strategy"
 date: "February 10, 2025"
 read_time: "6 min read"
+featured_image: "/assets/images/blog/blog-multiple-option-offense.svg"
 ---
 
 If you've ever watched Kansas play under Bill Self, you've seen something that looks effortless — but is anything but. The Jayhawks run a system built on reads, not memorization. That's the core idea behind the Multiple Option Offense, and it's one of the most powerful systems you can install at any level of basketball.

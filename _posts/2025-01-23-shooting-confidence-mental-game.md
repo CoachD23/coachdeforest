@@ -5,6 +5,7 @@ description: "Perfect shooting form means nothing without confidence. Here's how
 category: "Player Development"
 date: "January 23, 2025"
 read_time: "5 min read"
+featured_image: "/assets/images/blog/blog-shooting-confidence.svg"
 ---
 
 Every gym in America has a player who looks like a shooter. The form is textbook. The follow-through is perfect. In warm-ups, they don't miss. But when the game starts and the defense closes out and the crowd gets loud, that textbook form produces bricks. The mechanics are there. The confidence isn't.

@@ -5,6 +5,7 @@ description: "Why ball toughness is the most overlooked skill in youth basketbal
 category: "Youth Coaching"
 date: "February 8, 2025"
 read_time: "5 min read"
+featured_image: "/assets/images/blog/blog-ball-toughness-drills.svg"
 ---
 
 Every coach wants to reduce turnovers. Every coach wants better offensive efficiency. But most coaches are trying to solve these problems with plays and schemes when the real answer is much simpler: ball toughness.

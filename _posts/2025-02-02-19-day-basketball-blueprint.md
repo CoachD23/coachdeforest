@@ -5,6 +5,7 @@ description: "How to dramatically improve your shooting, passing, and dribbling 
 category: "Player Development"
 date: "February 2, 2025"
 read_time: "5 min read"
+featured_image: "/assets/images/blog/blog-19day-blueprint.svg"
 ---
 
 Most basketball improvement guides give you a laundry list of drills with no structure. You end up doing random exercises with no clear progression, wondering why your game isn't getting better. The 19 Day Basketball Blueprint takes a different approach: a structured, day-by-day plan that builds on itself.

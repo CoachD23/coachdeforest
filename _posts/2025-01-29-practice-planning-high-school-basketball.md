@@ -5,6 +5,7 @@ description: "Most basketball practices waste time. Here's a framework for plann
 category: "Coaching"
 date: "January 29, 2025"
 read_time: "5 min read"
+featured_image: "/assets/images/blog/blog-practice-planning.svg"
 ---
 
 The biggest difference between good basketball programs and great ones isn't talent. It's practice quality. I've watched teams with Division I prospects sleepwalk through unfocused two-hour practices, and I've watched undersized teams with no scholarship players practice with so much intensity and purpose that they were nearly unbeatable on Friday nights.

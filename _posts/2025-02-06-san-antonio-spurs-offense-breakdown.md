@@ -5,6 +5,7 @@ description: "The Spurs offense isn't just for the pros. Here's why their system
 category: "Offensive Strategy"
 date: "February 6, 2025"
 read_time: "7 min read"
+featured_image: "/assets/images/blog/blog-spurs-offense-breakdown.svg"
 ---
 
 The San Antonio Spurs dynasty wasn't built on individual talent alone. It was built on a system — one that emphasized ball movement, player movement, and unselfish decision-making. And the principles behind that system work just as well in your high school gym as they did in the AT&T Center.

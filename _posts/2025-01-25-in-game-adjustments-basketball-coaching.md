@@ -5,6 +5,7 @@ description: "The best basketball coaches don't just draw up plays — they read
 category: "Coaching"
 date: "January 25, 2025"
 read_time: "5 min read"
+featured_image: "/assets/images/blog/blog-in-game-adjustments.svg"
 ---
 
 You can have the best game plan in the world and still lose if you can't adjust. Basketball is fluid, unpredictable, and constantly evolving within a single game. The coach who prepared for man-to-man defense suddenly sees a 2-3 zone. The point guard who was dominating the first half picks up his third foul. The opposing coach switches to a full-court press that disrupts your tempo.

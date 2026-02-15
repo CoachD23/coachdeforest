@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  
+  <!-- Diagonal stripe pattern (gold) -->
+  <defs>
+    <pattern id="diag-stripe10" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#d4a843" stroke-width="2" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag-stripe10)"/>
+  
+  <!-- Icon: Target/bullseye -->
+  <g transform="translate(600, 180)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#d4a843" stroke-width="2.5"/>
+    <!-- Second ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#d4a843" stroke-width="2.5"/>
+    <!-- Third ring -->
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#d4a843" stroke-width="2.5"/>
+    <!-- Center bullseye -->
+    <circle cx="0" cy="0" r="6" fill="#d4a843"/>
+    <!-- Crosshairs -->
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#d4a843" stroke-width="1.5" opacity="0.8"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#d4a843" stroke-width="1.5" opacity="0.8"/>
+  </g>
+  
+  <!-- Gold separator line -->
+  <line x1="150" y1="380" x2="1050" y2="380" stroke="#d4a843" stroke-width="2"/>
+  
+  <!-- Title text -->
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Shooting Confidence &
+  </text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Mental Game
+  </text>
+  
+  <!-- Coach Deforest branding -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d4a843" text-anchor="middle">
+    COACH DEFOREST
+  </text>
+</svg>

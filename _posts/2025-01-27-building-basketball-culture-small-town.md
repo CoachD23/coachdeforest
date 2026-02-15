@@ -5,6 +5,7 @@ description: "You don't need a big budget or big-city recruits to build a winnin
 category: "Coaching"
 date: "January 27, 2025"
 read_time: "6 min read"
+featured_image: "/assets/images/blog/blog-basketball-culture.svg"
 ---
 
 Small-town basketball is a different animal. You don't get transfers from prep schools. You don't have AAU connections feeding you talent. Your gym might double as the cafeteria, and your budget might cover basketballs and not much else. But some of the best basketball I've ever been around happened in exactly these conditions.

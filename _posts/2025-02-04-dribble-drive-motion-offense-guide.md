@@ -5,6 +5,7 @@ description: "How the Dribble Drive Motion Offense mirrors the Golden State Warr
 category: "Offensive Strategy"
 date: "February 4, 2025"
 read_time: "6 min read"
+featured_image: "/assets/images/blog/blog-dribble-drive-guide.svg"
 ---
 
 Basketball is trending toward positionless play. The days of the traditional point guard, shooting guard, small forward, power forward, and center lineup are fading. If you want your team to play the way the modern game is evolving, the Dribble Drive Motion Offense is one of the best systems you can install.

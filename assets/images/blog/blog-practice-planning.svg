@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  
+  <!-- Diagonal stripe pattern (gold) -->
+  <defs>
+    <pattern id="diag-stripe7" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#d4a843" stroke-width="2" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag-stripe7)"/>
+  
+  <!-- Icon: Clock/whistle -->
+  <g transform="translate(600, 180)">
+    <!-- Clock face -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#d4a843" stroke-width="3"/>
+    <!-- Clock center dot -->
+    <circle cx="0" cy="0" r="3" fill="#d4a843"/>
+    <!-- Hour marks -->
+    <line x1="0" y1="-32" x2="0" y2="-26" stroke="#d4a843" stroke-width="2"/>
+    <line x1="0" y1="26" x2="0" y2="32" stroke="#d4a843" stroke-width="2"/>
+    <line x1="-32" y1="0" x2="-26" y2="0" stroke="#d4a843" stroke-width="2"/>
+    <line x1="26" y1="0" x2="32" y2="0" stroke="#d4a843" stroke-width="2"/>
+    <!-- Hour hand -->
+    <line x1="0" y1="0" x2="0" y2="-15" stroke="#d4a843" stroke-width="3" stroke-linecap="round"/>
+    <!-- Minute hand -->
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#d4a843" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Whistle bulge -->
+    <circle cx="0" cy="-42" r="8" fill="#d4a843"/>
+  </g>
+  
+  <!-- Gold separator line -->
+  <line x1="150" y1="380" x2="1050" y2="380" stroke="#d4a843" stroke-width="2"/>
+  
+  <!-- Title text -->
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Practice Planning for
+  </text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    High School
+  </text>
+  
+  <!-- Coach Deforest branding -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d4a843" text-anchor="middle">
+    COACH DEFOREST
+  </text>
+</svg>

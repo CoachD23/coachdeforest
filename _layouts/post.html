@@ -14,7 +14,7 @@
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ site.url }}{{ page._url }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-share.png">
+  <meta property="og:image" content="{{ site.url }}{% if page.featured_image %}{{ page.featured_image }}{% else %}/assets/images/og-share.png{% endif %}">
   <meta property="og:site_name" content="Coach DeForest">
   <meta property="og:locale" content="en_US">
   <meta property="article:author" content="Lee DeForest">
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@coachdeforest">
   <meta name="twitter:creator" content="@coachdeforest">
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-share.png">
+  <meta name="twitter:image" content="{{ site.url }}{% if page.featured_image %}{{ page.featured_image }}{% else %}/assets/images/og-share.png{% endif %}">
 
   <!-- Theme & Mobile -->
   <meta name="theme-color" content="#0a1628">
@@ -53,7 +53,7 @@
     "description": "{{ page.description | default: site.description }}",
     "datePublished": "{{ page.iso_date }}",
     "url": "{{ site.url }}{{ page._url }}",
-    "image": "{{ site.url }}/assets/images/og-share.png",
+    "image": "{{ site.url }}{% if page.featured_image %}{{ page.featured_image }}{% else %}/assets/images/og-share.png{% endif %}",
     "author": {
       "@type": "Person",
       "name": "Lee DeForest",

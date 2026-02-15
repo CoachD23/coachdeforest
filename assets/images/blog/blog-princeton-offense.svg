@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  
+  <!-- Diagonal stripe pattern (gold) -->
+  <defs>
+    <pattern id="diag-stripe6" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#d4a843" stroke-width="2" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag-stripe6)"/>
+  
+  <!-- Icon: Playbook X's and O's -->
+  <g transform="translate(600, 180)">
+    <!-- Playbook page -->
+    <rect x="-40" y="-35" width="80" height="70" fill="#d4a843" rx="2"/>
+    <rect x="-35" y="-30" width="70" height="60" fill="#0a1628" rx="1"/>
+    <!-- O (circle) positions -->
+    <circle cx="-15" cy="-10" r="6" fill="none" stroke="#d4a843" stroke-width="2"/>
+    <circle cx="15" cy="-10" r="6" fill="none" stroke="#d4a843" stroke-width="2"/>
+    <circle cx="0" cy="15" r="6" fill="none" stroke="#d4a843" stroke-width="2"/>
+    <!-- X (cross) positions -->
+    <path d="M -20 5 L -12 13 M -12 5 L -20 13" stroke="#d4a843" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 12 5 L 20 13 M 20 5 L 12 13" stroke="#d4a843" stroke-width="2" stroke-linecap="round"/>
+    <!-- Arrows showing movement -->
+    <path d="M -15 2 L -15 9" stroke="#d4a843" stroke-width="1.5" fill="none" marker-end="url(#arrowhead2)"/>
+    <defs>
+      <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+        <polygon points="0 0, 5 3, 0 6" fill="#d4a843"/>
+      </marker>
+    </defs>
+  </g>
+  
+  <!-- Gold separator line -->
+  <line x1="150" y1="380" x2="1050" y2="380" stroke="#d4a843" stroke-width="2"/>
+  
+  <!-- Title text -->
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Princeton Offense in
+  </text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">
+    Modern Basketball
+  </text>
+  
+  <!-- Coach Deforest branding -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d4a843" text-anchor="middle">
+    COACH DEFOREST
+  </text>
+</svg>
