@@ -193,6 +193,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
 }
 
+/* Mobile CTA — hidden on desktop, shown in mobile overlay */
+.mobile-cta {
+  display: none !important;
+}
+
 /* Mobile Toggle */
 .mobile-toggle {
   display: none;
@@ -863,18 +868,7 @@ h1, h2, h3, h4, h5, h6 {
   .header-cta { display: none; }
   .mobile-toggle { display: flex; }
 
-  .main-nav.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    background: var(--navy);
-    padding: 24px;
-    gap: 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
+  /* mobile nav handled by .main-nav.active in overlay section */
 
   .split-section {
     grid-template-columns: 1fr;
@@ -1243,20 +1237,81 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   MOBILE NAV — active class fix
+   MOBILE NAV — Full-screen overlay
    ============================================ */
-.main-nav.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 72px;
-  left: 0;
-  right: 0;
-  background: var(--navy);
-  padding: 24px;
-  gap: 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+@media (max-width: 900px) {
+  .main-nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--navy);
+    padding: 80px 40px 40px;
+    gap: 0;
+    z-index: 998;
+    opacity: 1;
+    visibility: visible;
+    animation: mobileNavFadeIn 0.3s ease;
+  }
+  .main-nav.active .nav-link {
+    font-size: 1.4rem;
+    padding: 16px 0;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    opacity: 0;
+    animation: mobileNavItemSlide 0.35s ease forwards;
+  }
+  .main-nav.active .nav-link:nth-child(1) { animation-delay: 0.05s; }
+  .main-nav.active .nav-link:nth-child(2) { animation-delay: 0.1s; }
+  .main-nav.active .nav-link:nth-child(3) { animation-delay: 0.15s; }
+  .main-nav.active .nav-link:nth-child(4) { animation-delay: 0.2s; }
+  .main-nav.active .nav-link:nth-child(5) { animation-delay: 0.25s; }
+  .main-nav.active .nav-link:nth-child(6) { animation-delay: 0.3s; }
+  .main-nav.active .nav-link:last-child {
+    border-bottom: none;
+  }
+  .main-nav.active .nav-link.active {
+    color: var(--gold);
+  }
+  .main-nav.active .mobile-cta {
+    display: inline-flex;
+    margin-top: 24px;
+    padding: 14px 36px;
+    background: var(--red);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    opacity: 0;
+    animation: mobileNavItemSlide 0.35s ease forwards;
+    animation-delay: 0.35s;
+  }
+  .main-nav.active .mobile-cta:hover {
+    background: var(--red-hover);
+  }
+}
+@keyframes mobileNavFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes mobileNavItemSlide {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mobile-toggle.active {
   z-index: 999;
+  position: relative;
 }
 .mobile-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
@@ -1266,6 +1321,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+body.nav-open {
+  overflow: hidden;
 }
 
 /* ============================================
@@ -2060,4 +2118,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 .faq-answer a:hover {
   color: var(--red);
+}
+
+/* ============================================
+   RESPONSIVE — Media & FAQ pages
+   ============================================ */
+@media (max-width: 900px) {
+  .media-availability-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .media-highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .talk-topic {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+  }
+  .talk-number {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .media-highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .media-stat-number {
+    font-size: 1.5rem;
+  }
+  .faq-question span {
+    font-size: 0.9rem;
+  }
+  .faq-group-title {
+    font-size: 1.1rem;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }

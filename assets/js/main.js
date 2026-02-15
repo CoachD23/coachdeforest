@@ -7,17 +7,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Mobile Menu Toggle ---
   const toggle = document.getElementById('mobileToggle');
   const nav = document.getElementById('mainNav');
+
+  function openMobileNav() {
+    nav.classList.add('active');
+    toggle.classList.add('active');
+    document.body.classList.add('nav-open');
+  }
+
+  function closeMobileNav() {
+    nav.classList.remove('active');
+    toggle.classList.remove('active');
+    document.body.classList.remove('nav-open');
+  }
+
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('active');
+      if (nav.classList.contains('active')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
+
     // Close menu on link click
-    nav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        toggle.classList.remove('active');
-      });
+    nav.querySelectorAll('.nav-link, .mobile-cta').forEach(link => {
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('active')) {
+        closeMobileNav();
+      }
     });
   }
 
