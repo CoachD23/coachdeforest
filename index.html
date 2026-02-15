@@ -7,6 +7,7 @@ description: "Basketball coaching wisdom distilled into books that transform the
 <!-- HERO -->
 <section class="hero">
   <div class="hero-overlay"></div>
+  <div class="hero-pattern"></div>
   <div class="hero-content">
     <span class="hero-label fade-in">Basketball. Wisdom. Delivered.</span>
     <h1 class="fade-in">Elevate Your<br><em>Coaching Game</em></h1>
@@ -14,6 +15,11 @@ description: "Basketball coaching wisdom distilled into books that transform the
     <div class="hero-actions fade-in">
       <a href="{{ '/books/' | relative_url }}" class="btn btn-primary">Explore the Collection</a>
       <a href="{{ '/about/' | relative_url }}" class="btn btn-outline">Meet Coach DeForest</a>
+    </div>
+    <div class="hero-trust fade-in">
+      <span><i class="fas fa-trophy"></i> 2011 State Champion</span>
+      <span><i class="fas fa-star"></i> 4.5&#9733; on Amazon</span>
+      <span><i class="fas fa-book"></i> 5 Books Published</span>
     </div>
   </div>
 </section>
@@ -42,7 +48,7 @@ description: "Basketball coaching wisdom distilled into books that transform the
   </div>
 </section>
 
-<!-- FEATURED BOOKS -->
+<!-- ALL 5 BOOKS -->
 <section class="section section-dark">
   <div class="container">
     <div class="section-header fade-in">
@@ -50,7 +56,7 @@ description: "Basketball coaching wisdom distilled into books that transform the
       <h2 class="section-title">Books That Change the Game</h2>
       <p class="section-subtitle">Each book is crafted from real-world experience on the court — not theory, but tested strategies that win.</p>
     </div>
-    <div class="books-grid">
+    <div class="books-grid books-grid-5">
       <div class="book-card fade-in">
         <div class="book-cover">
           <img src="{{ '/assets/images/book-multiple-option.jpg' | relative_url }}" alt="A Multiple Option System Based on Bill Self and the Kansas Jayhawks" loading="lazy">
@@ -81,9 +87,26 @@ description: "Basketball coaching wisdom distilled into books that transform the
           <a href="https://www.amazon.com/Basketball-Coaching-Advanced-Concepts-Secondary/dp/1521474028" target="_blank" class="btn btn-gold btn-sm">Buy on Amazon</a>
         </div>
       </div>
-    </div>
-    <div class="section-cta fade-in">
-      <a href="{{ '/books/' | relative_url }}" class="btn btn-primary">View All Books</a>
+      <div class="book-card fade-in">
+        <div class="book-cover">
+          <img src="{{ '/assets/images/book-spurs-offense.jpg' | relative_url }}" alt="The San Antonio Spurs Offense Playbook" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>The San Antonio Spurs Offense</h3>
+          <p>Break down the Spurs' dynasty offense — ball movement, player interchangeability, and championship principles.</p>
+          <a href="https://www.amazon.com/San-Antonio-Spurs-Offense-Playbook/dp/1521744971" target="_blank" class="btn btn-gold btn-sm">Buy on Amazon</a>
+        </div>
+      </div>
+      <div class="book-card fade-in">
+        <div class="book-cover">
+          <img src="{{ '/assets/images/book-19day-blueprint.jpg' | relative_url }}" alt="The 19 Day Basketball Blueprint" loading="lazy">
+        </div>
+        <div class="book-info">
+          <h3>19 Day Basketball Blueprint</h3>
+          <p>A structured 19-day program to dramatically improve your fundamentals — shooting, ball handling, and game IQ.</p>
+          <a href="https://www.amazon.com/Day-Basketball-Blueprint-dramatically-fundamentals/dp/B0C8QQ4BRG" target="_blank" class="btn btn-gold btn-sm">Buy on Amazon</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -146,16 +169,34 @@ description: "Basketball coaching wisdom distilled into books that transform the
   </div>
 </section>
 
-<!-- FOLLOW ON X -->
+<!-- LATEST FROM THE BLOG -->
 <section class="section section-dark">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-label">Join the Community</span>
-      <h2 class="section-title">Follow on X</h2>
-      <p class="section-subtitle">Coaching tips, book updates, and basketball insights — follow @coachdeforest.</p>
+      <span class="section-label">From the Court</span>
+      <h2 class="section-title">Latest Insights</h2>
+      <p class="section-subtitle">Coaching strategies, player development tips, and lessons from two decades in the game.</p>
+    </div>
+    <div class="blog-grid blog-grid-home">
+{{ recent_posts }}
     </div>
     <div class="section-cta fade-in">
-      <a href="https://x.com/coachdeforest" target="_blank" class="btn btn-primary"><i class="fab fa-x-twitter" style="margin-right:8px;"></i> Follow @coachdeforest</a>
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">View All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOLLOW ON X — enhanced -->
+<section class="section section-community">
+  <div class="container">
+    <div class="community-content fade-in">
+      <div class="community-icon">
+        <i class="fab fa-x-twitter"></i>
+      </div>
+      <span class="section-label">Join the Community</span>
+      <h2 class="section-title">Follow @coachdeforest</h2>
+      <p class="community-text">Daily coaching tips, offensive breakdowns, book updates, and conversations with coaches around the world.</p>
+      <a href="https://x.com/coachdeforest" target="_blank" class="btn btn-primary"><i class="fab fa-x-twitter" style="margin-right:8px;"></i> Follow on X</a>
     </div>
   </div>
 </section>
