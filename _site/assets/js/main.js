@@ -7,17 +7,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Mobile Menu Toggle ---
   const toggle = document.getElementById('mobileToggle');
   const nav = document.getElementById('mainNav');
+
+  function openMobileNav() {
+    nav.classList.add('active');
+    toggle.classList.add('active');
+    document.body.classList.add('nav-open');
+  }
+
+  function closeMobileNav() {
+    nav.classList.remove('active');
+    toggle.classList.remove('active');
+    document.body.classList.remove('nav-open');
+  }
+
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('active');
+      if (nav.classList.contains('active')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
+
     // Close menu on link click
-    nav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        toggle.classList.remove('active');
-      });
+    nav.querySelectorAll('.nav-link, .mobile-cta').forEach(link => {
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('active')) {
+        closeMobileNav();
+      }
     });
   }
 
@@ -31,8 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
     fadeEls.forEach(el => observer.observe(el));
+
+    // Fallback: show elements already in viewport on page load
+    requestAnimationFrame(() => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('visible');
+        }
+      });
+    });
   } else {
     fadeEls.forEach(el => el.classList.add('visible'));
   }
