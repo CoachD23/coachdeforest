@@ -41,8 +41,8 @@
   <meta name="twitter:image" content="{{ site.url }}/assets/images/og-share.png">
 
   <!-- Theme & Mobile -->
-  <meta name="theme-color" content="#faf6ee">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
 
@@ -119,9 +119,23 @@
 <body>
   {% include header.html %}
 
+  {% if page.full_width %}
   <main>
     {{ content }}
   </main>
+  {% else %}
+  <div class="page-grid">
+    <aside class="col-left" aria-label="Books by Coach DeForest">
+      {% include sidebar-books.html %}
+    </aside>
+    <main class="col-main">
+      {{ content }}
+    </main>
+    <aside class="col-right" aria-label="Sidebar">
+      {% include sidebar-widgets.html %}
+    </aside>
+  </div>
+  {% endif %}
 
   {% include footer.html %}
 

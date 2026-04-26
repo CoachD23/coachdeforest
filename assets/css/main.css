@@ -1,122 +1,169 @@
 /* ============================================
-   COACH DEFOREST — EDITORIAL AUTHOR DESIGN SYSTEM
-   "Premium basketball book imprint"
-   Palette: cream paper, warm rich black, oxblood + tan
+   COACH DEFOREST — EDITORIAL BLOG DESIGN SYSTEM
+   "White paper. Black ink. One red accent."
+   Reference: austinkleon.com — 3-column blog layout
    ============================================ */
 
 /* --- CSS Variables --- */
 :root {
-  /* New editorial palette */
-  --bg-primary: #faf6ee;        /* aged paper */
-  --bg-secondary: #f5f1e8;      /* slightly darker cream */
-  --bg-deep: #ebe3d1;           /* deeper sand for inverted sections */
-  --text-primary: #1a1814;      /* warm rich black */
-  --text-secondary: #4a4540;
-  --text-muted: #7a7570;
-  --accent-primary: #7a1f2e;       /* oxblood */
-  --accent-primary-hover: #5a1820;
-  --accent-secondary: #a8845f;  /* book spine tan */
-  --accent-secondary-light: #c4a580;
-  --border: #e0d8c8;
+  /* New editorial palette — clean newspaper */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --bg-deep: #f1f1f1;          /* subtle gray for inverted sections */
+  --bg-header: #0a0a0a;        /* header bar */
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --text-muted: #888888;
+  --accent-primary: #dc2626;       /* bold red */
+  --accent-primary-hover: #991b1b;
+  --accent-secondary: #dc2626;     /* unify accent — single red */
+  --accent-secondary-light: #fca5a5;
+  --border: #e5e5e5;
+  --border-strong: #1a1a1a;
 
-  /* Legacy token aliases — remap to editorial palette so existing rules work
-     without rewriting 2k lines. Navy = warm dark backgrounds, gold = tan,
-     red = oxblood. */
-  --navy: #2a221c;             /* warm dark — replaces navy on dark sections */
-  --navy-light: #3a2f26;
-  --navy-medium: #4a3c30;
-  --red: #7a1f2e;              /* oxblood */
-  --red-hover: #5a1820;
-  --gold: #a8845f;             /* book spine tan */
-  --gold-light: #c4a580;
-  --white: #faf6ee;            /* "white" surfaces are cream paper */
-  --off-white: #f5f1e8;
-  --gray-100: #f5f1e8;
-  --gray-200: #e0d8c8;
-  --gray-300: #cdc4b1;
-  --gray-500: #7a7570;
-  --gray-700: #4a4540;
-  --gray-900: #1a1814;
+  /* Legacy token aliases — remap to new palette so existing rules
+     across 2k lines keep working without a global rewrite.
+     navy → black header bg, gold → red accent, red → red, white → white. */
+  --navy: #0a0a0a;
+  --navy-light: #1a1a1a;
+  --navy-medium: #262626;
+  --red: #dc2626;
+  --red-hover: #991b1b;
+  --gold: #dc2626;
+  --gold-light: #fca5a5;
+  --white: #ffffff;
+  --off-white: #f8f8f8;
+  --gray-100: #f8f8f8;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-500: #888888;
+  --gray-700: #444444;
+  --gray-900: #111111;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 8px rgba(42,34,28,0.06);
-  --shadow-md: 0 4px 20px rgba(42,34,28,0.10);
-  --shadow-lg: 0 8px 40px rgba(42,34,28,0.14);
-  --shadow-xl: 0 16px 60px rgba(42,34,28,0.18);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.10);
+  --shadow-xl: 0 16px 40px rgba(0,0,0,0.14);
   --radius: 2px;
   --radius-md: 4px;
   --radius-lg: 6px;
 }
 
-/* Body uses cream paper background and slightly larger book-typography body size */
+/* Body — clean white, no paper texture */
 body {
   background: var(--bg-primary) !important;
   color: var(--text-primary) !important;
   font-size: 1.0625rem;
 }
 
-/* Subtle paper texture on body */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background-image:
-    radial-gradient(rgba(122, 31, 46, 0.018) 1px, transparent 1px),
-    radial-gradient(rgba(168, 132, 95, 0.015) 1px, transparent 1px);
-  background-size: 22px 22px, 32px 32px;
-  background-position: 0 0, 11px 11px;
-}
+/* No paper texture in editorial mode — keep selector to override anything inherited */
+body::before { content: none !important; }
 
 /* --- Editorial overrides on legacy structures --- */
 
-/* Header: cream w/ warm border instead of dark navy */
+/* New editorial header — black bar, white text */
 .site-header {
-  background: rgba(250, 246, 238, 0.94) !important;
-  border-bottom: 1px solid var(--border) !important;
-  backdrop-filter: blur(10px);
+  background: var(--bg-header) !important;
+  border-bottom: none !important;
+  backdrop-filter: none;
 }
-.logo-text { color: var(--text-primary) !important; }
-.logo-accent { color: var(--accent-primary) !important; font-style: italic; }
-.nav-link { color: var(--text-secondary) !important; }
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.18em;
+  color: #ffffff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.brand:hover { color: var(--accent-primary) !important; }
+.primary-nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.primary-nav a {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #f5f5f5 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.primary-nav a:hover { color: var(--accent-primary) !important; }
+.header-social {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.header-social a {
+  color: #f5f5f5 !important;
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+.header-social a:hover { color: var(--accent-primary) !important; }
+
+@media (max-width: 900px) {
+  .header-inner { flex-wrap: wrap; padding: 12px 16px; gap: 12px; }
+  .primary-nav { order: 3; flex-basis: 100%; flex-wrap: wrap; gap: 14px 18px; justify-content: center; }
+  .primary-nav a { font-size: 0.75rem; letter-spacing: 0.10em; }
+  .brand { font-size: 1.05rem; }
+}
+
+/* Legacy header classes (kept harmless if any old page still uses them) */
+.logo-text { color: #ffffff !important; }
+.logo-accent { color: var(--accent-primary) !important; font-style: normal; }
+.nav-link { color: #f5f5f5 !important; }
 .nav-link:hover, .nav-link.active { color: var(--accent-primary) !important; }
 .nav-link::after { background: var(--accent-primary) !important; }
-.mobile-toggle span { background: var(--text-primary) !important; }
+.mobile-toggle span { background: #ffffff !important; }
 
 .header-cta {
   background: var(--accent-primary) !important;
-  color: var(--bg-primary) !important;
+  color: #ffffff !important;
   letter-spacing: 0.08em;
-  font-weight: 500;
-  text-transform: none;
+  font-weight: 600;
+  text-transform: uppercase;
   border-radius: 2px;
 }
 .header-cta:hover {
   background: var(--accent-primary-hover) !important;
-  box-shadow: 0 4px 14px rgba(122, 31, 46, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.30) !important;
 }
 
-/* Hero — cream paper, layered serifs, restrained accents */
+/* Hero — clean white, restrained */
 .hero {
   background: var(--bg-primary) !important;
-  min-height: 80vh;
+  min-height: auto;
   border-bottom: 1px solid var(--border);
+  padding: 32px 0 40px;
 }
 .hero-overlay {
-  background: linear-gradient(180deg, rgba(245,241,232,0) 0%, rgba(235,227,209,0.4) 100%) !important;
+  background: none !important;
 }
 .hero-pattern {
-  background-image:
-    radial-gradient(circle at 18% 78%, rgba(168,132,95,0.10) 0%, transparent 55%),
-    radial-gradient(circle at 82% 22%, rgba(122,31,46,0.06) 0%, transparent 55%) !important;
+  background-image: none !important;
 }
 .hero-label {
   color: var(--accent-primary) !important;
-  border-color: rgba(122, 31, 46, 0.25) !important;
-  background: rgba(255,255,255,0.4);
+  border-color: rgba(220, 38, 38, 0.25) !important;
+  background: transparent;
   letter-spacing: 0.3em;
 }
 .hero h1 {
@@ -141,16 +188,30 @@ body::before {
 .hero-trust span { color: var(--text-muted) !important; }
 .hero-trust i, .hero-trust .icon { color: var(--accent-secondary) !important; }
 
-/* Page hero — cream */
+/* Page hero — clean */
 .page-hero {
-  background: var(--bg-secondary) !important;
+  background: var(--bg-primary) !important;
   border-bottom: 1px solid var(--border);
+  padding: 32px 0 24px;
+  min-height: auto !important;
 }
 .page-hero .hero-overlay {
-  background: linear-gradient(180deg, rgba(250,246,238,0.4) 0%, rgba(235,227,209,0.4) 100%) !important;
+  background: none !important;
 }
-.page-hero h1 { color: var(--text-primary) !important; }
+.page-hero h1 {
+  color: var(--text-primary) !important;
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
 .page-hero p { color: var(--text-secondary) !important; }
+.page-hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: left;
+}
 
 /* Stats bar — cream w/ tan rule */
 .stats-bar {
@@ -2661,3 +2722,314 @@ body.nav-open {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   3-COLUMN BLOG-FIRST EDITORIAL LAYOUT
+   (Austin Kleon reference)
+   ============================================ */
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.col-left, .col-right { min-width: 0; }
+.col-main { min-width: 0; }
+
+@media (max-width: 1024px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 24px 16px 48px;
+  }
+  .col-main { order: 1; }
+  .col-left { order: 2; }
+  .col-right { order: 3; }
+}
+
+/* --- Left sidebar: book promos --- */
+
+.book-promo {
+  margin-bottom: 32px;
+  text-align: center;
+}
+.book-promo-caption {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+.book-promo a {
+  display: block;
+  transition: transform var(--transition);
+}
+.book-promo a:hover { transform: translateY(-2px); }
+.book-promo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: var(--shadow-md);
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .col-left {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 24px;
+  }
+  .book-promo { margin-bottom: 0; }
+}
+
+/* --- Right sidebar: widgets --- */
+
+.widget {
+  margin-bottom: 36px;
+  border-top: 2px solid var(--border-strong);
+  padding-top: 16px;
+}
+.widget-title {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin: 0 0 14px;
+}
+
+/* Search */
+.widget-search { margin-bottom: 36px; }
+.widget-search input[type="search"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 2px;
+  transition: border-color var(--transition);
+}
+.widget-search input[type="search"]:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: #ffffff;
+}
+
+/* Author card */
+.widget-author-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+  display: block;
+  box-shadow: var(--shadow-sm);
+}
+.widget-author-bio {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+.widget-author-bio a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.widget-author-bio a:hover { color: var(--accent-primary-hover); text-decoration: underline; }
+.widget-author-socials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.widget-author-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-primary);
+  transition: all var(--transition);
+}
+.widget-author-socials a:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
+}
+
+/* Newsletter widget */
+.widget-newsletter-sub {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+  line-height: 1.55;
+}
+.widget-newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 2px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+.widget-newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: #ffffff;
+}
+.widget-newsletter-form button {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.widget-newsletter-form button:hover { background: var(--accent-primary-hover); }
+
+/* Recent posts */
+.recent-post {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.recent-post:last-child { border-bottom: none; }
+.recent-post-date {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin: 0 0 4px;
+}
+.recent-post a {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  line-height: 1.4;
+  font-weight: 500;
+  display: block;
+}
+.recent-post a:hover { color: var(--accent-primary); }
+
+/* --- Center column: post layout --- */
+
+.post-article {
+  max-width: 100%;
+}
+.post-header {
+  margin: 0 0 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.post-category {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 10px;
+}
+.post-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+}
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.post-meta time {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+.post-body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.post-body h2 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  font-size: 1.625rem;
+  margin: 32px 0 12px;
+}
+.post-body h3 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  margin: 24px 0 10px;
+}
+.post-body p { margin: 0 0 16px; }
+.post-body a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.post-body a:hover { color: var(--accent-primary-hover); }
+.post-body blockquote {
+  margin: 24px 0;
+  padding: 4px 0 4px 20px;
+  border-left: 4px solid var(--accent-primary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: transparent;
+}
+.post-body blockquote p { margin: 0; }
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  margin: 24px 0;
+  border-radius: 2px;
+}
+.post-footer {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-footer .btn { font-size: 0.8125rem; }

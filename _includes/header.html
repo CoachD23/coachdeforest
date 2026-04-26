@@ -1,21 +1,16 @@
 <header class="site-header">
-  <div class="header-container">
-    <a href="{{ '/' | relative_url }}" class="logo">
-      <span class="logo-text">COACH</span>
-      <span class="logo-accent">DEFOREST</span>
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
-      <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a>
-      <a href="{{ '/books/' | relative_url }}" class="nav-link {% if page.url == '/books/' %}active{% endif %}">Books</a>
-      <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a>
-      <a href="{{ '/media/' | relative_url }}" class="nav-link {% if page.url == '/media/' %}active{% endif %}">Media</a>
-      <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a>
-      <a href="{{ '/books/' | relative_url }}" class="mobile-cta">Shop Books</a>
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="brand">COACH DEFOREST</a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/books/' | relative_url }}">Books</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/media/' | relative_url }}">Media</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
-    <a href="{{ '/books/' | relative_url }}" class="header-cta">Shop Books</a>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-social">
+      <a href="https://x.com/coachdeforest" target="_blank" rel="noopener" aria-label="Follow on X">{% include icon.html name="x-twitter" %}</a>
+      <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" rel="noopener" aria-label="Amazon Author Page">{% include icon.html name="amazon" %}</a>
+    </div>
   </div>
 </header>

@@ -1,0 +1,42 @@
+<form class="widget-search" action="https://www.google.com/search" method="get" target="_blank" role="search">
+  <input type="hidden" name="sitesearch" value="coachdeforest.com">
+  <input type="hidden" name="q" value="site:coachdeforest.com">
+  <input type="search" name="q" placeholder="Search this website" aria-label="Search this website">
+</form>
+
+<aside class="widget" aria-labelledby="widget-author-title">
+  <h2 class="widget-title" id="widget-author-title">About the Author</h2>
+  <img src="{{ '/assets/images/author-photo.jpg' | relative_url }}" alt="Coach Lee DeForest" class="widget-author-photo" loading="lazy">
+  <p class="widget-author-bio">Coach Lee DeForest is a basketball coach with 25+ years on the floor and the author of 5 books. State champion (2011), U.S. Army Reserve veteran, husband, and dad. <a href="{{ '/about/' | relative_url }}">Read more &rarr;</a></p>
+  <div class="widget-author-socials">
+    <a href="https://x.com/coachdeforest" target="_blank" rel="noopener" aria-label="X / Twitter">{% include icon.html name="x-twitter" %}</a>
+    <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" rel="noopener" aria-label="Amazon Author Page">{% include icon.html name="amazon" %}</a>
+    <a href="https://coachprincetonbasketball.com/" target="_blank" rel="noopener" aria-label="Coach Princeton Basketball">{% include icon.html name="basketball-ball" %}</a>
+    <a href="mailto:coachdeforest@gmail.com" aria-label="Email">{% include icon.html name="envelope" %}</a>
+  </div>
+</aside>
+
+<aside class="widget" aria-labelledby="widget-newsletter-title">
+  <h2 class="widget-title" id="widget-newsletter-title">Subscribe to the Newsletter</h2>
+  <p class="widget-newsletter-sub">Weekly coaching insights, drill ideas, and writing on basketball &mdash; direct to your inbox.</p>
+  <form class="widget-newsletter-form" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/free-sample-success/">
+    <input type="hidden" name="form-name" value="newsletter">
+    <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+    <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+    <button type="submit">Subscribe</button>
+  </form>
+</aside>
+
+<aside class="widget" aria-labelledby="widget-recent-title">
+  <h2 class="widget-title" id="widget-recent-title">Recent Posts</h2>
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts limit:5 %}
+      <div class="recent-post">
+        <p class="recent-post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p class="widget-newsletter-sub">Coming soon.</p>
+  {% endif %}
+</aside>
