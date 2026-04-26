@@ -1,0 +1,91 @@
+<!-- Exit-intent newsletter popup. Shows once per session.
+     Uses the same Netlify Form ('newsletter') as the sidebar widget. -->
+<div id="exit-popup" class="exit-popup" hidden>
+  <div class="exit-popup-overlay" data-close></div>
+  <div class="exit-popup-card" role="dialog" aria-labelledby="exit-popup-title" aria-describedby="exit-popup-desc">
+    <button type="button" class="exit-popup-close" aria-label="Close" data-close>&times;</button>
+    <p class="exit-popup-eyebrow">Before you go</p>
+    <h2 class="exit-popup-title" id="exit-popup-title">Steal the playbook.</h2>
+    <p class="exit-popup-desc" id="exit-popup-desc">
+      One email a week. Drill ideas, offensive system breakdowns, and writing on the work of coaching basketball — direct from Coach DeForest.
+    </p>
+    <form name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/free-sample-success/" class="exit-popup-form">
+      <input type="hidden" name="form-name" value="newsletter">
+      <input type="hidden" name="source" value="exit-intent">
+      <p hidden><label>Don&rsquo;t fill: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <p class="exit-popup-fineprint">Unsubscribe any time. No spam.</p>
+  </div>
+</div>
+
+<style>
+  .exit-popup { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 24px; }
+  .exit-popup.is-open { display: flex; animation: exit-fade .22s ease-out; }
+  .exit-popup-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); cursor: pointer; }
+  .exit-popup-card { position: relative; background: #fff; max-width: 480px; width: 100%; padding: 40px 32px 32px; border: 3px solid var(--border-strong); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .exit-popup-close { position: absolute; top: 8px; right: 12px; background: none; border: none; font-size: 32px; line-height: 1; cursor: pointer; color: var(--text-mute); padding: 4px 12px; font-family: inherit; }
+  .exit-popup-close:hover { color: var(--accent); }
+  .exit-popup-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .exit-popup-title { font-family: var(--font-serif); font-size: 1.85rem; font-weight: 700; line-height: 1.15; margin: 0 0 12px; color: var(--text); }
+  .exit-popup-desc { font-size: 15px; color: var(--text-soft); line-height: 1.55; margin-bottom: 18px; }
+  .exit-popup-form { display: flex; flex-direction: column; gap: 8px; }
+  .exit-popup-form input[type="email"] { padding: 12px 14px; border: 1px solid var(--border); font-size: 15px; font-family: inherit; background: var(--bg-soft); }
+  .exit-popup-form input[type="email"]:focus { outline: none; border-color: var(--text); }
+  .exit-popup-form button { padding: 13px 20px; font-size: 13px; font-weight: 700; }
+  .exit-popup-fineprint { font-size: 12px; color: var(--text-mute); margin-top: 10px; text-align: center; }
+  @keyframes exit-fade { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+  @media (max-width: 600px) { .exit-popup-card { padding: 32px 20px 24px; } .exit-popup-title { font-size: 1.55rem; } }
+</style>
+
+<script>
+(function() {
+  var STORAGE_KEY = 'cd_exit_popup_shown';
+  var DELAY_MS = 5000; // Don't fire in first 5 seconds (avoids accidental triggers)
+  var MOBILE_IDLE_MS = 25000; // Mobile: show after 25s if user hasn't interacted with form
+  var popup = document.getElementById('exit-popup');
+  if (!popup) return;
+  if (sessionStorage.getItem(STORAGE_KEY)) return;
+  if (window.location.pathname.indexOf('/free-sample-success') === 0) return;
+
+  var ready = false;
+  setTimeout(function() { ready = true; }, DELAY_MS);
+
+  function show() {
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+    sessionStorage.setItem(STORAGE_KEY, '1');
+    popup.removeAttribute('hidden');
+    popup.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hide() {
+    popup.classList.remove('is-open');
+    setTimeout(function() { popup.setAttribute('hidden', ''); }, 200);
+    document.body.style.overflow = '';
+  }
+
+  // Desktop: mouse leaves viewport via top edge
+  document.addEventListener('mouseleave', function(e) {
+    if (!ready) return;
+    if (e.clientY <= 0 && e.relatedTarget === null) show();
+  });
+
+  // Mobile: idle timer
+  var isMobile = window.matchMedia('(max-width: 768px)').matches;
+  if (isMobile) {
+    setTimeout(function() {
+      if (ready) show();
+    }, MOBILE_IDLE_MS);
+  }
+
+  // Close handlers
+  popup.addEventListener('click', function(e) {
+    if (e.target.hasAttribute('data-close')) hide();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.classList.contains('is-open')) hide();
+  });
+})();
+</script>
