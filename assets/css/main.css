@@ -319,8 +319,33 @@ a.btn-primary:hover, .btn-primary:hover { background: var(--accent-hover); borde
   border-bottom: 1px solid var(--border);
 }
 .post-list { display: flex; flex-direction: column; gap: 36px; }
-.post-list-item { padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.post-list-item {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  align-items: start;
+}
 .post-list-item:last-child { border-bottom: none; padding-bottom: 0; }
+.post-list-thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.post-list-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+.post-list-thumb:hover img { transform: scale(1.03); }
+.post-list-body { min-width: 0; }
+@media (max-width: 600px) {
+  .post-list-item { grid-template-columns: 1fr; gap: 12px; }
+  .post-list-thumb { aspect-ratio: 16 / 9; }
+}
 .post-list-item .post-eyebrow {
   font-size: 11px;
   font-weight: 700;

@@ -19,20 +19,29 @@ description: "Coach Lee DeForest — 25+ years coaching, 5 Amazon basketball coa
   <div class="post-list">
     {% for post in site.posts limit:8 %}
       <article class="post-list-item">
-        {% if post.categories.first %}
-          <p class="post-eyebrow">{{ post.categories.first | replace: "-", " " }}</p>
-        {% else %}
-          <p class="post-eyebrow">Coaching</p>
+        {% if post.featured_image %}
+          <a class="post-list-thumb" href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ post.featured_image | relative_url }}" alt="" loading="lazy">
+          </a>
         {% endif %}
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-          {% if post.read_time %}<span>{{ post.read_time }}</span>{% endif %}
+        <div class="post-list-body">
+          {% if post.category %}
+            <p class="post-eyebrow">{{ post.category }}</p>
+          {% elsif post.categories.first %}
+            <p class="post-eyebrow">{{ post.categories.first | replace: "-", " " }}</p>
+          {% else %}
+            <p class="post-eyebrow">Coaching</p>
+          {% endif %}
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+            {% if post.read_time %}<span>{{ post.read_time }}</span>{% endif %}
+          </div>
+          {% if post.excerpt %}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+          {% endif %}
+          <a class="read-more" href="{{ post.url | relative_url }}">Read more &rarr;</a>
         </div>
-        {% if post.excerpt %}
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
-        {% endif %}
-        <a class="read-more" href="{{ post.url | relative_url }}">Read more &rarr;</a>
       </article>
     {% endfor %}
   </div>
