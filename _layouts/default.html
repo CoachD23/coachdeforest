@@ -55,26 +55,44 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <!-- JSON-LD Structured Data: WebSite + Person -->
+  <!-- JSON-LD Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://coachdeforest.com/#lee-deforest",
+    "name": "Lee DeForest",
+    "alternateName": "Coach DeForest",
+    "url": "https://coachdeforest.com/about/",
+    "image": "https://coachdeforest.com/assets/images/author-photo.jpg",
+    "jobTitle": "Basketball Coach & Author",
+    "description": "Basketball coach, 2011 state champion, U.S. Army Reserve veteran, and author of five basketball coaching books.",
+    "knowsAbout": [
+      "Basketball coaching",
+      "Princeton Offense",
+      "Dribble Drive Motion Offense",
+      "Youth basketball player development",
+      "Basketball practice planning"
+    ],
+    "sameAs": [
+      "https://x.com/coachdeforest",
+      "https://www.amazon.com/Lee-DeForest/e/B072HRC9C1",
+      "https://coachprincetonbasketball.com/",
+      "https://floridacoastalprep.com/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://coachdeforest.com/#website",
     "name": "Coach DeForest",
     "url": "https://coachdeforest.com",
     "description": "Basketball coaching wisdom distilled into books that transform the way you think about the game.",
-    "author": {
-      "@type": "Person",
-      "name": "Lee DeForest",
-      "alternateName": "Coach DeForest",
-      "url": "https://coachdeforest.com/about/",
-      "sameAs": [
-        "https://x.com/coachdeforest",
-        "https://www.amazon.com/Lee-DeForest/e/B072HRC9C1"
-      ],
-      "jobTitle": "Basketball Coach & Author",
-      "description": "Basketball coach for almost 20 years, 2011 state champion, and author of 5 Amazon basketball books."
-    }
+    "author": {"@id": "https://coachdeforest.com/#lee-deforest"}
   }
   </script>
 
