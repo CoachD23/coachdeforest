@@ -1,311 +1,70 @@
 ---
 layout: default
-title: "Basketball Coaching Books by Coach Lee DeForest"
-description: "Basketball coaching books by Coach Lee DeForest — 2011 state champion, 20+ years of experience. Practical offensive systems, player development drills, and coaching strategies on Amazon."
+title: "Coach DeForest — Basketball Coaching Books, Drills & Insights"
+description: "Coach Lee DeForest — 25+ years coaching, 5 Amazon basketball coaching books, weekly insights on offensive systems, drills, and the work of coaching."
 ---
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
-  <div class="hero-content">
-    <span class="hero-label fade-in">Basketball. Wisdom. Delivered.</span>
-    <h1 class="fade-in">5 Books. 25 Years.<br><em>One Mission.</em></h1>
-    <p class="hero-sub fade-in">Help you coach basketball better. A quarter century in the gym, distilled into practical playbooks built for coaches who refuse to settle.</p>
-    <div class="hero-actions fade-in">
-      <a href="{{ '/books/' | relative_url }}" class="btn btn-primary">Browse the Books</a>
-      <a href="{{ '/about/' | relative_url }}" class="btn btn-outline">About Coach DeForest</a>
-    </div>
-    <div class="hero-trust fade-in">
-      <span>{% include icon.html name="trophy" %} 2011 State Champion</span>
-      <span>{% include icon.html name="star" %} 4.5 on Amazon</span>
-      <span>{% include icon.html name="book" %} 5 Books Published</span>
-    </div>
+<article class="home-hero">
+  <p class="eyebrow">Coach. Author. Veteran.</p>
+  <h1>Twenty-five years on the floor. <em>Five books on the shelf.</em></h1>
+  <p class="lede">Weekly writing on offensive systems, drill design, and the work of coaching basketball — from a guy who's spent a quarter century in the gym.</p>
+  <div class="hero-cta">
+    <a href="{{ '/books/' | relative_url }}" class="btn btn-primary">Browse the Books</a>
+    <a href="{{ '/about/' | relative_url }}" class="btn btn-outline">About Coach DeForest</a>
   </div>
+</article>
+
+<section>
+  <h2 class="post-list-heading">Latest Insights</h2>
+  <div class="post-list">
+    {% for post in site.posts limit:8 %}
+      <article class="post-list-item">
+        {% if post.categories.first %}
+          <p class="post-eyebrow">{{ post.categories.first | replace: "-", " " }}</p>
+        {% else %}
+          <p class="post-eyebrow">Coaching</p>
+        {% endif %}
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          {% if post.read_time %}<span>{{ post.read_time }} min read</span>{% endif %}
+        </div>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        {% endif %}
+        <a class="read-more" href="{{ post.url | relative_url }}">Read more &rarr;</a>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if site.posts.size > 8 %}
+    <p style="margin-top:32px;text-align:center;">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">All Posts &rarr;</a>
+    </p>
+  {% endif %}
 </section>
 
-<!-- STATS BAR -->
-<section class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat fade-in">
-        <span class="stat-number">25+</span>
-        <span class="stat-label">Years Coaching</span>
-      </div>
-      <div class="stat fade-in">
-        <span class="stat-number">5</span>
-        <span class="stat-label">Books Published</span>
-      </div>
-      <div class="stat fade-in">
-        <span class="stat-number">2011</span>
-        <span class="stat-label">State Champion</span>
-      </div>
-      <div class="stat fade-in">
-        <span class="stat-number">4.5&#9733;</span>
-        <span class="stat-label">Amazon Reviews</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ALL 5 BOOKS -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-label">The Collection</span>
-      <h2 class="section-title">Books That Change the Game</h2>
-      <p class="section-subtitle">Each book is crafted from real-world experience on the court — not theory, but tested strategies that win.</p>
-    </div>
-    <div class="books-grid books-grid-5">
-      <div class="book-card fade-in">
-        <div class="book-cover">
-          <a href="/books/multiple-option-offense/">
-            <img src="{{ '/assets/images/book-multiple-option.jpg' | relative_url }}" alt="A Multiple Option System Based on Bill Self and the Kansas Jayhawks" loading="lazy">
-          </a>
-        </div>
-        <div class="book-info">
-          <h3><a href="/books/multiple-option-offense/" style="color:inherit;text-decoration:none;">A Multiple Option System</a></h3>
-          <p>Learn the Multiple Option Offense based on Bill Self and the Kansas Jayhawks — adaptable to your personnel.</p>
-          <a href="/books/multiple-option-offense/" class="btn btn-gold btn-sm">Learn More</a>
-        </div>
-      </div>
-      <div class="book-card fade-in">
-        <div class="book-cover">
-          <a href="/books/youth-basketball-ball-toughness/">
-            <img src="{{ '/assets/images/book-youth-basketball.jpg' | relative_url }}" alt="Youth Basketball Coaching: Practice Drills for Ball Toughness" loading="lazy">
-          </a>
-        </div>
-        <div class="book-info">
-          <h3><a href="/books/youth-basketball-ball-toughness/" style="color:inherit;text-decoration:none;">Practice Drills for Ball Toughness</a></h3>
-          <p>Increase offensive efficiency, reduce turnovers, and win more games with championship-level drills.</p>
-          <a href="/books/youth-basketball-ball-toughness/" class="btn btn-gold btn-sm">Learn More</a>
-        </div>
-      </div>
-      <div class="book-card fade-in">
-        <div class="book-cover">
-          <a href="/books/dribble-drive-motion-offense/">
-            <img src="{{ '/assets/images/book-dribble-drive.jpg' | relative_url }}" alt="How to Coach the Dribble Drive Motion Offense" loading="lazy">
-          </a>
-        </div>
-        <div class="book-info">
-          <h3><a href="/books/dribble-drive-motion-offense/" style="color:inherit;text-decoration:none;">Dribble Drive Motion Offense</a></h3>
-          <p>A "positionless" offense like the Golden State Warriors — basic and advanced concepts, drills, and quick hitters.</p>
-          <a href="/books/dribble-drive-motion-offense/" class="btn btn-gold btn-sm">Learn More</a>
-        </div>
-      </div>
-      <div class="book-card fade-in">
-        <div class="book-cover">
-          <a href="/books/san-antonio-spurs-offense/">
-            <img src="{{ '/assets/images/book-spurs-offense.jpg' | relative_url }}" alt="The San Antonio Spurs Offense Playbook" loading="lazy">
-          </a>
-        </div>
-        <div class="book-info">
-          <h3><a href="/books/san-antonio-spurs-offense/" style="color:inherit;text-decoration:none;">The San Antonio Spurs Offense</a></h3>
-          <p>Break down the Spurs' dynasty offense — ball movement, player interchangeability, and championship principles.</p>
-          <a href="/books/san-antonio-spurs-offense/" class="btn btn-gold btn-sm">Learn More</a>
-        </div>
-      </div>
-      <div class="book-card fade-in">
-        <div class="book-cover">
-          <a href="/books/19-day-basketball-blueprint/">
-            <img src="{{ '/assets/images/book-19day-blueprint.jpg' | relative_url }}" alt="The 19 Day Basketball Blueprint" loading="lazy">
-          </a>
-        </div>
-        <div class="book-info">
-          <h3><a href="/books/19-day-basketball-blueprint/" style="color:inherit;text-decoration:none;">19 Day Basketball Blueprint</a></h3>
-          <p>A structured 19-day program to dramatically improve your fundamentals — shooting, ball handling, and game IQ.</p>
-          <a href="/books/19-day-basketball-blueprint/" class="btn btn-gold btn-sm">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT PREVIEW (Split Section) -->
-<section class="section section-light">
-  <div class="container">
-    <div class="split-section">
-      <div class="split-image fade-in fade-in-left">
-        <img src="{{ '/assets/images/author-photo.jpg' | relative_url }}" alt="Coach Lee DeForest" class="about-preview-img">
-      </div>
-      <div class="split-content fade-in fade-in-right">
-        <span class="section-label">The Author</span>
-        <h2 class="section-title">Coach Lee DeForest</h2>
-        <p>A basketball coach for 25+ years, Lee DeForest learned to love the game in the gym with his father and learned to love writing after graduating from law school. Most noted for his variation of the Princeton Offense, he won a state title in 2011 at Cinco Ranch HS in Texas. A USAR veteran, he now runs Florida Coastal Prep — a post-grad basketball academy.</p>
-        <p>Growing up in a small town in Kentucky with big dreams, he's published books on the Princeton Basketball Offense that have helped him make friends all over the world.</p>
-        <a href="{{ '/about/' | relative_url }}" class="btn btn-primary">Read the Full Story</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE SECTION -->
-<section class="section section-quote">
-  <div class="container">
-    <div class="quote-block fade-in">
-      {% include icon.html name="quote-left" class="icon quote-icon" %}
-      <blockquote>
-        "My belief is that you can learn from the adversity and success in the stories of other people. We can all learn from one another to live a more successful and inspirational life."
-      </blockquote>
-      <cite>— Coach DeForest</cite>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF / TESTIMONIALS -->
-<section class="section section-white">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-label">What Coaches Are Saying</span>
-      <h2 class="section-title">Trusted by Coaches Worldwide</h2>
-      <p class="section-subtitle">Over 160 Amazon reviews across 5 books — coaches at every level are using these systems to win.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars" aria-label="5 out of 5 stars">
-          {% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}
-        </div>
-        <p class="testimonial-text">"Implemented the Multiple Option system with my JV squad last season. The read-based approach completely changed how my players see the floor. We went from 8 wins to 16."</p>
-        <div class="testimonial-author">
-          <span class="testimonial-name">High School Coach</span>
-          <span class="testimonial-role">Verified Amazon Review</span>
-        </div>
-      </div>
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars" aria-label="5 out of 5 stars">
-          {% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}
-        </div>
-        <p class="testimonial-text">"The ball toughness drills transformed our practice sessions. My youth players went from 18 turnovers a game to single digits in three weeks. This book is a must-have."</p>
-        <div class="testimonial-author">
-          <span class="testimonial-name">Youth League Coach</span>
-          <span class="testimonial-role">Verified Amazon Review</span>
-        </div>
-      </div>
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars" aria-label="5 out of 5 stars">
-          {% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}{% include icon.html name="star" %}
-        </div>
-        <p class="testimonial-text">"I've read dozens of coaching books. Coach DeForest's breakdown of the Spurs offense is the most detailed and practical I've ever seen. The diagrams alone are worth the price."</p>
-        <div class="testimonial-author">
-          <span class="testimonial-name">AAU Program Director</span>
-          <span class="testimonial-role">Verified Amazon Review</span>
-        </div>
-      </div>
-    </div>
-    <!-- Trust Bar -->
-    <div class="trust-bar fade-in">
-      <div class="trust-item">
-        {% include icon.html name="amazon" %}
-        <span>160+ Reviews</span>
-      </div>
-      <div class="trust-item">
-        {% include icon.html name="star" %}
-        <span>4.5 Avg Rating</span>
-      </div>
-      <div class="trust-item">
-        {% include icon.html name="globe" %}
-        <span>Readers Worldwide</span>
-      </div>
-      <div class="trust-item">
-        {% include icon.html name="trophy" %}
-        <span>State Champion Author</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY THESE BOOKS -->
-<section class="section section-light">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-label">Why Coaches Choose These Books</span>
-      <h2 class="section-title">Built Different</h2>
-    </div>
-    <div class="features-grid">
-      <div class="feature fade-in">
-        <div class="feature-icon">{% include icon.html name="clipboard-check" %}</div>
-        <h3>Battle-Tested</h3>
-        <p>Every concept has been proven on the court, not just theorized in a classroom. Real strategies from real seasons — including a state championship.</p>
-      </div>
-      <div class="feature fade-in">
-        <div class="feature-icon">{% include icon.html name="bolt" %}</div>
-        <h3>Immediately Actionable</h3>
-        <p>No filler. Each chapter gives you something you can implement at your very next practice.</p>
-      </div>
-      <div class="feature fade-in">
-        <div class="feature-icon">{% include icon.html name="trophy" %}</div>
-        <h3>Championship Mindset</h3>
-        <p>It's not just X's and O's — it's the culture, discipline, and mental edge that separates good from great.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LATEST FROM THE BLOG -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-label">From the Court</span>
-      <h2 class="section-title">Latest Insights</h2>
-      <p class="section-subtitle">Coaching strategies, player development tips, and lessons from two decades in the game.</p>
-    </div>
-    <div class="blog-grid blog-grid-home">
-{{ recent_posts }}
-    </div>
-    <div class="section-cta fade-in">
-      <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">View All Articles</a>
-    </div>
-  </div>
-</section>
-
-<!-- EMAIL CAPTURE / LEAD MAGNET -->
-<section class="section section-leadmagnet" id="leadmagnet">
-  <div class="container">
-    <div class="leadmagnet-content fade-in">
-      <div class="leadmagnet-icon">
-        {% include icon.html name="file-pdf" %}
-      </div>
-      <span class="section-label" style="color:var(--gold);">Free Download</span>
-      <h2 class="section-title" style="color:var(--white);">The Coach's Quick-Start Checklist</h2>
-      <p class="leadmagnet-text">Get a free one-page checklist: 10 things every coach should do before the first practice of the season. Built from 20 years of real coaching experience.</p>
-      <form name="lead-magnet" method="POST" data-netlify="true" class="leadmagnet-form" action="/thank-you/">
-        <input type="hidden" name="form-name" value="lead-magnet">
-        <div class="leadmagnet-form-row">
-          <input type="text" name="first-name" placeholder="First Name" required class="leadmagnet-input">
-          <input type="email" name="email" placeholder="Email Address" required class="leadmagnet-input">
-          <button type="submit" class="btn btn-primary leadmagnet-btn">Get the Free Checklist</button>
-        </div>
-        <p class="leadmagnet-disclaimer">No spam. Unsubscribe anytime. We respect your privacy.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOLLOW ON X — enhanced -->
-<section class="section section-community">
-  <div class="container">
-    <div class="community-content fade-in">
-      <div class="community-icon">
-        {% include icon.html name="x-twitter" %}
-      </div>
-      <span class="section-label">Join the Community</span>
-      <h2 class="section-title">Follow @coachdeforest</h2>
-      <p class="community-text">Daily coaching tips, offensive breakdowns, book updates, and conversations with coaches around the world.</p>
-      <a href="https://x.com/coachdeforest" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="x-twitter" %} Follow on X</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <div class="container">
-    <div class="cta-content fade-in">
-      <h2>Ready to Transform Your Coaching?</h2>
-      <p>Browse the full collection on Amazon and start building the program you've always envisioned.</p>
-      <div class="cta-actions">
-        <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" class="btn btn-primary">Shop on Amazon</a>
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">Get in Touch</a>
-      </div>
-    </div>
-  </div>
-</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Coach DeForest",
+  "url": "https://coachdeforest.com",
+  "description": "Basketball coaching books, drills, and insights from Coach Lee DeForest — 25+ years coaching, 5 Amazon-published books.",
+  "author": {
+    "@type": "Person",
+    "name": "Lee DeForest",
+    "url": "https://coachdeforest.com/about/",
+    "sameAs": [
+      "https://www.amazon.com/Lee-DeForest/e/B072HRC9C1",
+      "https://x.com/coachdeforest",
+      "https://coachprincetonbasketball.com/"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Coach DeForest",
+    "url": "https://coachdeforest.com"
+  }
+}
+</script>
