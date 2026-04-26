@@ -301,8 +301,8 @@ img { max-width: 100%; height: auto; display: block; }
   cursor: pointer;
   font-family: inherit;
 }
-.btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; text-decoration: none; }
+a.btn-primary, .btn-primary { background: var(--accent); color: #fff !important; border-color: var(--accent); }
+a.btn-primary:hover, .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff !important; text-decoration: none; }
 .btn-outline { background: transparent; color: var(--text); border-color: var(--text); }
 .btn-outline:hover { background: var(--text); color: #fff; text-decoration: none; }
 

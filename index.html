@@ -27,7 +27,7 @@ description: "Coach Lee DeForest — 25+ years coaching, 5 Amazon basketball coa
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <div class="post-meta">
           <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-          {% if post.read_time %}<span>{{ post.read_time }} min read</span>{% endif %}
+          {% if post.read_time %}<span>{{ post.read_time }}</span>{% endif %}
         </div>
         {% if post.excerpt %}
           <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
