@@ -370,17 +370,52 @@ a.btn-primary:hover, .btn-primary:hover { background: var(--accent-hover); borde
 .site-footer {
   background: var(--bg-header);
   color: #fff;
-  padding: 48px 28px 32px;
   margin-top: 64px;
 }
-.footer-inner {
+.footer-top { padding: 48px 28px 32px; }
+.footer-top .container,
+.footer-bottom .container {
   max-width: 1280px;
   margin: 0 auto;
+}
+.footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 32px;
 }
-.site-footer h3 {
+.footer-logo {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.logo-accent { color: var(--accent); }
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.55;
+  margin: 0 0 16px;
+  max-width: 360px;
+}
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.75);
+  transition: color .15s, border-color .15s;
+}
+.footer-socials a:hover { color: var(--accent); border-color: var(--accent); }
+.footer-socials svg { width: 16px; height: 16px; fill: currentColor; }
+.footer-links h4,
+.footer-contact h4 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -388,23 +423,37 @@ a.btn-primary:hover, .btn-primary:hover { background: var(--accent-hover); borde
   color: #fff;
   margin: 0 0 16px;
 }
-.site-footer p, .site-footer li { font-size: 14px; color: rgba(255,255,255,0.7); }
-.site-footer ul { list-style: none; padding: 0; }
-.site-footer li { margin-bottom: 8px; }
-.site-footer a { color: rgba(255,255,255,0.7); }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+.footer-contact p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-contact a { color: rgba(255,255,255,0.7); }
 .site-footer a:hover { color: var(--accent); text-decoration: none; }
 .footer-bottom {
-  max-width: 1280px;
-  margin: 32px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.08);
   text-align: center;
   font-size: 13px;
   color: rgba(255,255,255,0.5);
+  padding: 20px 28px;
 }
+.footer-bottom p { margin: 0; }
 @media (max-width: 768px) {
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
 }
+
+/* GLOBAL ICON CONSTRAINT — without this, inline SVGs without explicit
+   width/height attributes balloon to fill their parent (catastrophic
+   when the parent is unstyled). */
+.icon { width: 1em; height: 1em; flex-shrink: 0; vertical-align: -0.125em; }
 
 /* LEGACY CLASS NEUTRALIZATION
    Many existing pages use .section/.hero/.section-dark etc. These are
