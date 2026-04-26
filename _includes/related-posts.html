@@ -1,0 +1,48 @@
+{%- comment -%}
+  Related posts: 3 most recent posts in same category as current post,
+  excluding the current post. Falls back to most recent posts if no
+  category match.
+{%- endcomment -%}
+{%- assign current_cat = page.category | default: page.categories.first -%}
+{%- assign related = "" | split: "" -%}
+{%- if current_cat -%}
+  {%- for post in site.posts -%}
+    {%- if post.url == page.url -%}{%- continue -%}{%- endif -%}
+    {%- assign post_cat = post.category | default: post.categories.first -%}
+    {%- if post_cat == current_cat -%}
+      {%- assign related = related | push: post -%}
+    {%- endif -%}
+    {%- if related.size >= 3 -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if related.size < 3 -%}
+  {%- for post in site.posts -%}
+    {%- if post.url == page.url -%}{%- continue -%}{%- endif -%}
+    {%- unless related contains post -%}
+      {%- assign related = related | push: post -%}
+    {%- endunless -%}
+    {%- if related.size >= 3 -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{% if related.size > 0 %}
+<section class="related-posts" aria-labelledby="related-title">
+  <h2 class="related-title" id="related-title">Keep Reading</h2>
+  <div class="related-grid">
+    {% for post in related %}
+    <a class="related-card" href="{{ post.url | relative_url }}">
+      {% if post.featured_image %}
+      <div class="related-card-thumb">
+        <img src="{{ post.featured_image | relative_url }}" alt="" loading="lazy">
+      </div>
+      {% endif %}
+      <div class="related-card-body">
+        {% assign rcat = post.category | default: post.categories.first %}
+        {% if rcat %}<p class="related-card-eyebrow">{{ rcat | replace: "-", " " }}</p>{% endif %}
+        <h3 class="related-card-title">{{ post.title }}</h3>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

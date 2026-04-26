@@ -91,6 +91,9 @@
   </script>
 </head>
 <body>
+  <!-- Reading progress bar -->
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"><span></span></div>
+
   {% include header.html %}
 
   <div class="page-grid">
@@ -103,26 +106,56 @@
         <header class="post-header">
           {% if page.category %}<span class="post-category">{{ page.category }}</span>{% endif %}
           <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
-          <div class="post-meta">
-            <span>By <strong>Coach DeForest</strong></span>
-            <time datetime="{{ page.iso_date }}" itemprop="datePublished">{{ page.date }}</time>
-            {% if page.read_time %}<span>{{ page.read_time }}</span>{% endif %}
+
+          <div class="post-byline">
+            <img src="{{ '/assets/images/author-photo.jpg' | relative_url }}" alt="Coach Lee DeForest" class="post-byline-photo" loading="lazy" width="48" height="48">
+            <div class="post-byline-meta">
+              <p class="post-byline-author">By <a href="{{ '/about/' | relative_url }}"><strong>Coach Lee DeForest</strong></a></p>
+              <p class="post-byline-info">
+                <time datetime="{{ page.iso_date }}" itemprop="datePublished">{{ page.date }}</time>
+                {% if page.read_time %}<span class="post-byline-sep">·</span><span>{{ page.read_time }}</span>{% endif %}
+              </p>
+            </div>
           </div>
           <meta itemprop="author" content="Lee DeForest">
         </header>
 
         {% if page.featured_image %}
-        <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}" class="post-hero-image" loading="lazy" style="width:100%;height:auto;margin:0 0 24px;border-radius:2px;">
+        <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}" class="post-hero-image" loading="lazy">
         {% endif %}
 
         <div class="post-body">
           {{ content }}
         </div>
 
+        {% if page.tags and page.tags.size > 0 %}
+        <div class="post-tags" aria-label="Post tags">
+          {% for tag in page.tags %}
+          <span class="post-tag">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Inline subscribe CTA -->
+        <aside class="post-subscribe" aria-labelledby="post-subscribe-title">
+          <p class="post-subscribe-eyebrow">Get the next one</p>
+          <h2 class="post-subscribe-title" id="post-subscribe-title">One email a week. No fluff.</h2>
+          <p class="post-subscribe-desc">Drill ideas, offensive system breakdowns, and writing on the work of coaching basketball — direct from Coach DeForest.</p>
+          <form name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/free-sample-success/" class="post-subscribe-form">
+            <input type="hidden" name="form-name" value="newsletter">
+            <input type="hidden" name="source" value="post-inline">
+            <p hidden><label>Don&rsquo;t fill: <input name="bot-field"></label></p>
+            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </aside>
+
         <footer class="post-footer">
           <a href="https://x.com/coachdeforest" target="_blank" rel="noopener" class="btn btn-primary btn-sm">{% include icon.html name="x-twitter" %} Follow @coachdeforest</a>
           <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline btn-sm">&larr; Back to Blog</a>
         </footer>
+
+        {% include related-posts.html %}
       </article>
     </main>
 
@@ -133,6 +166,27 @@
 
   {% include footer.html %}
 
+  {% include exit-intent.html %}
+
   <script src="/assets/js/main.js"></script>
+  <script>
+    // Reading progress bar
+    (function() {
+      var bar = document.querySelector('#reading-progress > span');
+      var article = document.querySelector('.post-body');
+      if (!bar || !article) return;
+      function update() {
+        var rect = article.getBoundingClientRect();
+        var winH = window.innerHeight || document.documentElement.clientHeight;
+        var total = rect.height + winH * 0.5;
+        var passed = winH - rect.top;
+        var pct = Math.max(0, Math.min(100, (passed / total) * 100));
+        bar.style.width = pct + '%';
+      }
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update, { passive: true });
+    })();
+  </script>
 </body>
 </html>
