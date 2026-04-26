@@ -46,6 +46,19 @@ body {
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 
+/* --- Inline SVG Icons (replaces Font Awesome) --- */
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+/* Star icon needs solid fill */
+.testimonial-stars .icon,
+.hero-trust .icon { fill: currentColor; }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

@@ -1,0 +1,8 @@
+# Local Netlify folder
+.netlify
+
+# Jekyll build output (built by CI)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/

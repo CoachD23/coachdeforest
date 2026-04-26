@@ -9,8 +9,8 @@
           </div>
           <p class="footer-tagline">Basketball coaching wisdom, distilled into books that transform the way you think about the game.</p>
           <div class="footer-socials">
-            <a href="https://x.com/coachdeforest" target="_blank" aria-label="Follow on X"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" aria-label="Amazon"><i class="fab fa-amazon"></i></a>
+            <a href="https://x.com/coachdeforest" target="_blank" rel="noopener" aria-label="Follow on X">{% include icon.html name="x-twitter" %}</a>
+            <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" rel="noopener" aria-label="Amazon">{% include icon.html name="amazon" %}</a>
           </div>
         </div>
         <div class="footer-links">
@@ -23,12 +23,13 @@
         <div class="footer-links">
           <h4>Books</h4>
           <a href="{{ '/books/' | relative_url }}">All Books</a>
-          <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank">Shop on Amazon</a>
+          <a href="https://www.amazon.com/Lee-DeForest/e/B072HRC9C1" target="_blank" rel="noopener">Shop on Amazon</a>
+          <a href="https://coachprincetonbasketball.com/" target="_blank" rel="noopener">Princeton Offense System</a>
         </div>
         <div class="footer-contact">
           <h4>Get in Touch</h4>
-          <p><i class="fas fa-envelope"></i> coachdeforest@gmail.com</p>
-          <p><i class="fab fa-x-twitter"></i> <a href="https://x.com/coachdeforest" target="_blank">@coachdeforest</a></p>
+          <p>{% include icon.html name="envelope" %} coachdeforest@gmail.com</p>
+          <p>{% include icon.html name="x-twitter" %} <a href="https://x.com/coachdeforest" target="_blank" rel="noopener">@coachdeforest</a></p>
         </div>
       </div>
     </div>
