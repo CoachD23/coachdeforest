@@ -34,6 +34,11 @@ defaults:
       type: "plays"
     values:
       layout: "play"
+  - scope:
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:slug/
 
 # Exclude
 exclude:
