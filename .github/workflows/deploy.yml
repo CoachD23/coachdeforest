@@ -36,3 +36,36 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 5
+
+      - name: Ping IndexNow (Bing / Yandex / etc.)
+        run: |
+          python3 - <<'PYEOF'
+          import json, re, urllib.request, urllib.error, sys
+          KEY = "b6d0e660cc4f593485ba2389d01c092f"
+          HOST = "coachdeforest.com"
+          sitemap = urllib.request.urlopen(f"https://{HOST}/sitemap.xml", timeout=20).read().decode("utf-8", "ignore")
+          urls = re.findall(r"<loc>(.*?)</loc>", sitemap)
+          urls = [u for u in urls if HOST in u][:10000]
+          payload = {
+              "host": HOST,
+              "key": KEY,
+              "keyLocation": f"https://{HOST}/{KEY}.txt",
+              "urlList": urls,
+          }
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=json.dumps(payload).encode(),
+              headers={"Content-Type": "application/json"},
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=15) as resp:
+                  print(f"IndexNow status: {resp.status} ({len(urls)} URLs submitted)")
+          except urllib.error.HTTPError as e:
+              print(f"IndexNow HTTP {e.code}: {e.reason}")
+              sys.exit(0)  # don't fail the workflow over IndexNow
+          except urllib.error.URLError as e:
+              print(f"IndexNow network error: {e}")
+              sys.exit(0)
+          PYEOF
+        continue-on-error: true

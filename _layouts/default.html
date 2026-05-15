@@ -26,11 +26,20 @@
   <link rel="canonical" href="{{ site.url }}{{ page._url }}">
 
   <!-- Open Graph -->
+  {% if page.collection == 'plays' %}
+    {% assign og_image_path = '/assets/og/plays/' | append: page.slug | append: '.png' %}
+  {% elsif page.url == '/plays/' %}
+    {% assign og_image_path = '/assets/og/plays/index.png' %}
+  {% elsif page.og_image %}
+    {% assign og_image_path = page.og_image %}
+  {% else %}
+    {% assign og_image_path = '/assets/images/og-share.png' %}
+  {% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page._url }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-share.png">
+  <meta property="og:image" content="{{ site.url }}{{ og_image_path }}">
   <meta property="og:site_name" content="Coach DeForest">
   <meta property="og:locale" content="en_US">
 
@@ -38,7 +47,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@coachdeforest">
   <meta name="twitter:creator" content="@coachdeforest">
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-share.png">
+  <meta name="twitter:image" content="{{ site.url }}{{ og_image_path }}">
 
   <!-- Theme & Mobile -->
   <meta name="theme-color" content="#0a0a0a">
