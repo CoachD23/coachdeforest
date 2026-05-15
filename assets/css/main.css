@@ -994,3 +994,122 @@ a.btn-primary:hover, .btn-primary:hover { background: var(--accent-hover); borde
 
 .cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .hidden { display: none !important; }
+
+/* === Books page support === */
+.section-header {
+  text-align: center;
+  margin-bottom: 36px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-header .section-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.section-header .section-title {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.book-detail-layout { grid-template-columns: 0.9fr 1.1fr; }
+@media (max-width: 800px) {
+  .book-detail-layout { grid-template-columns: 1fr; }
+}
+.book-meta-detail {
+  font-size: 14px;
+  color: var(--text-muted, #666);
+  line-height: 1.7;
+}
+.book-meta-detail span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 6px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.feature {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 28px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+.section-light .feature, .section-white .feature {
+  background: white;
+  border: 1px solid var(--border, #e5e5e5);
+}
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent, #d97706);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.feature-icon svg, .feature-icon .icon { width: 26px; height: 26px; }
+.feature h3 {
+  font-size: 19px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+.feature p {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--text-muted, inherit);
+}
+.section-dark .feature h3, .section-navy .feature h3 { color: white; }
+.section-dark .feature p, .section-navy .feature p { color: rgba(255, 255, 255, 0.75); }
+
+.cta-banner {
+  background: var(--accent, #d97706);
+  color: white;
+  padding: 64px 24px;
+  text-align: center;
+}
+.cta-banner h2 {
+  color: white;
+  font-size: 32px;
+  margin: 0 0 12px;
+}
+.cta-banner p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 18px;
+  max-width: 620px;
+  margin: 0 auto 28px;
+  line-height: 1.55;
+}
+.cta-content { max-width: 720px; margin: 0 auto; }
+.cta-banner .btn-primary { background: white; color: var(--accent, #d97706); border-color: white; }
+.cta-banner .btn-primary:hover { background: rgba(255, 255, 255, 0.92); color: var(--accent-hover, #b45309); border-color: rgba(255, 255, 255, 0.92); }
+.cta-banner .btn-outline { background: transparent; color: white; border-color: white; }
+.cta-banner .btn-outline:hover { background: white; color: var(--accent, #d97706); }
+.cta-banner .cta-actions { justify-content: center; }
+
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent, #d97706);
+  margin-top: 12px;
+}
+.blog-read-more svg, .blog-read-more .icon { width: 14px; height: 14px; }
