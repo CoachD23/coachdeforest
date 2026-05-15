@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="hero-overlay"></div>
+  <div class="page-hero-content">
+    <span class="hero-label fade-in">{{ page.category | default: "Basketball play" }}</span>
+    <h1 class="fade-in">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="fade-in">{{ page.subtitle }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container narrow">
+    <div class="play-meta">
+      {% if page.play_type %}<span class="play-meta-item"><strong>Type:</strong> {{ page.play_type }}</span>{% endif %}
+      {% if page.era %}<span class="play-meta-item"><strong>Era:</strong> {{ page.era }}</span>{% endif %}
+      {% if page.associated_with %}<span class="play-meta-item"><strong>Associated with:</strong> {{ page.associated_with | join: ", " }}</span>{% endif %}
+    </div>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    {% if page.key_principles %}
+    <h2>Key principles</h2>
+    <ul class="key-principles">
+      {% for p in page.key_principles %}<li>{{ p }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.related_books %}
+    <h2>Related books from Coach DeForest</h2>
+    <ul class="related-books">
+      {% for b in page.related_books %}
+      <li><a href="/books/{{ b.slug }}/">{{ b.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="play-footer">
+      <p><a href="/plays/">&larr; Back to all plays</a></p>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "author": { "@type": "Person", "name": "Coach DeForest" },
+  "publisher": { "@type": "Organization", "name": "Coach DeForest" },
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+}
+</script>

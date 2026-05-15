@@ -19,6 +19,9 @@ collections:
   books:
     output: true
     permalink: /books/:title/
+  plays:
+    output: true
+    permalink: /plays/:title/
 
 # Defaults
 defaults:
@@ -27,6 +30,10 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      type: "plays"
+    values:
+      layout: "play"
 
 # Exclude
 exclude:

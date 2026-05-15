@@ -752,3 +752,89 @@ a.btn-primary:hover, .btn-primary:hover { background: var(--accent-hover); borde
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
 }
+
+/* === Plays directory + detail === */
+.play-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin: 0 0 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border, #e5e5e5);
+  font-size: 14px;
+  color: var(--text-muted, #666);
+}
+.play-meta-item strong {
+  color: var(--text, #111);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.prose { font-size: 17px; line-height: 1.7; color: var(--text, #222); }
+.prose p { margin: 0 0 18px; }
+
+.key-principles, .related-books, .play-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+.key-principles li, .related-books li, .play-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border, #eee);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text, #222);
+}
+.key-principles li:last-child, .related-books li:last-child, .play-list li:last-child {
+  border-bottom: none;
+}
+.key-principles li::before {
+  content: "→ ";
+  color: var(--accent, #d97706);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 48px 0 8px;
+  letter-spacing: -0.01em;
+}
+.section-intro {
+  color: var(--text-muted, #666);
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.prose-lead {
+  font-size: 18px;
+  color: var(--text-muted, #555);
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.cta-block {
+  margin: 56px 0 24px;
+  padding: 28px 32px;
+  background: var(--bg-card, #fafafa);
+  border: 1px solid var(--border, #e5e5e5);
+  border-left: 4px solid var(--accent, #d97706);
+  border-radius: 6px;
+}
+.cta-block h2 { margin: 0 0 8px; font-size: 22px; }
+.cta-block p { margin: 0; color: var(--text-muted, #555); }
+
+.play-footer {
+  margin: 56px 0 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border, #e5e5e5);
+}
+.play-footer a {
+  color: var(--accent, #d97706);
+  font-weight: 600;
+  text-decoration: none;
+}
+.play-footer a:hover { text-decoration: underline; }
+
+.container.narrow { max-width: 760px; margin: 0 auto; padding: 0 20px; }
