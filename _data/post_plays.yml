@@ -1,0 +1,121 @@
+# blog-slug -> related plays (keyword-matched for SEO internal linking)
+basketball-ball-movement-drills-practice:
+  - slug: throwback-action
+    title: "Throwback (Pass-and-Replace)"
+  - slug: stagger-screens
+    title: "Stagger Screens"
+  - slug: slip-screen
+    title: "Slip Screen"
+basketball-pick-and-roll-offense-coaching-system:
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: step-up-screen
+    title: "Step-Up Screen"
+  - slug: slip-screen
+    title: "Slip Screen"
+basketball-spread-floor-offense-guard-heavy:
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+  - slug: get-action
+    title: "Get Action"
+  - slug: brush-action
+    title: "Brush Action"
+bill-self-kansas-offensive-playbook-breakdown:
+  - slug: horns-set
+    title: "Horns Set"
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: stagger-screens
+    title: "Stagger Screens"
+corner-three-spacing-basketball-offense:
+  - slug: triangle-offense
+    title: "Triangle Offense"
+  - slug: hammer-action
+    title: "Hammer Action"
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+dribble-drive-motion-offense-DDMO-coaching:
+  - slug: hammer-action
+    title: "Hammer Action"
+  - slug: 2-3-zone-syracuse
+    title: "2-3 Zone (Syracuse Style)"
+  - slug: stagger-ghost
+    title: "Stagger-Ghost"
+dribble-drive-motion-offense-guide:
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+  - slug: hammer-action
+    title: "Hammer Action"
+  - slug: horns-set
+    title: "Horns Set"
+drive-and-kick-basketball-offense-drills:
+  - slug: hammer-action
+    title: "Hammer Action"
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: elevator-screens
+    title: "Elevator Screens"
+gregg-popovich-motion-offense-coaching-guide:
+  - slug: stagger-screens
+    title: "Stagger Screens"
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+high-low-offense-basketball-coaching-guide:
+  - slug: back-screen
+    title: "Back Screen (Back Pick)"
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: zipper-action
+    title: "Zipper Action"
+motion-offense-high-school-basketball:
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: horns-set
+    title: "Horns Set"
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+multiple-option-offense-bill-self:
+  - slug: stagger-screens
+    title: "Stagger Screens"
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+  - slug: wedge-action
+    title: "Wedge Action"
+nba-motion-offense-high-school-basketball:
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: horns-set
+    title: "Horns Set"
+  - slug: get-action
+    title: "Get Action"
+pace-and-space-basketball-offense-small-ball:
+  - slug: stagger-screens
+    title: "Stagger Screens"
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+positionless-basketball-offense-modern-game:
+  - slug: get-action
+    title: "Get Action"
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+  - slug: zipper-action
+    title: "Zipper Action"
+princeton-offense-modern-basketball:
+  - slug: 5-out-motion
+    title: "5-Out Motion Offense"
+  - slug: ucla-cut
+    title: "UCLA Cut"
+  - slug: wedge-action
+    title: "Wedge Action"
+reduce-turnovers-youth-basketball-practice-drills:
+  - slug: ucla-cut
+    title: "UCLA Cut"
+  - slug: get-action
+    title: "Get Action"
+  - slug: down-screen
+    title: "Down Screen"
+san-antonio-spurs-offense-breakdown:
+  - slug: wedge-action
+    title: "Wedge Action"
+  - slug: stagger-screens
+    title: "Stagger Screens"
