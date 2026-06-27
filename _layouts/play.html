@@ -39,6 +39,22 @@ layout: default
     </ul>
     {% endif %}
 
+    {%- comment -%} Related plays: sort by play_type (topical clustering) then take a rotating window of 6, so every play links to 6 and is linked by 6 — even distribution, no orphans. {%- endcomment -%}
+    {% assign sorted_plays = site.plays | sort: "play_type" %}
+    {% assign cur_idx = 0 %}
+    {% for sp in sorted_plays %}{% if sp.url == page.url %}{% assign cur_idx = forloop.index0 %}{% endif %}{% endfor %}
+    {% assign win_start = cur_idx | plus: 1 %}
+    {% assign doubled_plays = sorted_plays | concat: sorted_plays %}
+    {% assign related_plays = doubled_plays | slice: win_start, 6 %}
+    {% if related_plays.size > 0 %}
+    <h2>Related plays</h2>
+    <ul class="related-plays">
+      {% for rp in related_plays %}
+      <li><a href="{{ rp.url }}">{{ rp.title }}</a>{% if rp.play_type %} <span class="related-play-type">&mdash; {{ rp.play_type }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
     <div class="play-footer">
       <p><a href="/plays/">&larr; Back to all plays</a></p>
     </div>
