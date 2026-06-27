@@ -155,6 +155,19 @@
           <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline btn-sm">&larr; Back to Blog</a>
         </footer>
 
+        {% assign post_plays = site.data.post_plays[page.slug] %}
+        {% if post_plays %}
+        <div class="related-plays-block">
+          <h2>Related plays</h2>
+          <ul class="related-plays">
+            {% for rp in post_plays %}
+            <li><a href="/plays/{{ rp.slug }}/">{{ rp.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <p class="related-plays-all"><a href="/plays/">Explore all 39 basketball plays &rarr;</a></p>
+        </div>
+        {% endif %}
+
         {% include related-posts.html %}
       </article>
     </main>
