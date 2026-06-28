@@ -48,6 +48,8 @@ Replace your end-of-practice conditioning with this template:
 
 Your players leave practice exhausted *and* better at basketball. That's a win-win.
 
+Coaching in Northwest Florida? [FCP Sports](https://fcpsports.org) in Fort Walton Beach builds exactly this kind of skill-based conditioning into its youth training, camps, and leagues every week.
+
 > For 50+ skill-based conditioning drills designed for youth players, check out [*Youth Basketball Coaching: Practice Drills for Ball Toughness*](https://www.amazon.com/Youth-Basketball-Coaching-Practice-Toughness/dp/152097325X) on Amazon. Every drill builds toughness and skills simultaneously.
 
 ---
